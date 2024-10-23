@@ -14,8 +14,9 @@ const Contact = () => {
   };
 
   return (
-    <div className=" bg-gray-200  max-w-4xl mx-auto p-8">
-      <h1 className="text-3xl font-bold text-center mb-6">Contact Us</h1>
+    <div className='bg-[#66FCF1]'>
+    <div className=" bg-[#66FCF1]  max-w-4xl mx-auto p-8">
+      <h1 className="text-3xl font-bold text-center mb-6 underline">Contact Us</h1>
       <p className="text-center text-black mb-8">
         We’d love to hear from you! Fill out the form below or reach us at our email.</p>
       <div className="bg-gray-200  shadow-md rounded-lg p-6">
@@ -59,20 +60,13 @@ const Contact = () => {
             ></textarea>
           </div>
           <div className="mt-6">
-            <button type="submit" className="w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-500 transition duration-200">
+            <button type="submit" className="w-full bg-[aqua] text-white font-semibold py-2 rounded-lg transition duration-200">
               Send Message
             </button>
           </div>
         </form>
       </div>
-
-      <div className="mt-10 text-center">
-        <h2 className="text-2xl font-bold">Contact Information</h2>
-        <h4 className='font-semibold mb-2'>Email : hr@yaazhtech.com</h4>
-        <h4 className='font-semibold text-2xl'>phone No</h4>
-       <p>+91 6382289060</p>
-       <p>+04298278160</p>
-      </div>
+    </div>
     </div>
   );
 };

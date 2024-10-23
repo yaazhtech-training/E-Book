@@ -1,32 +1,29 @@
 import './App.css';
 import Navbar from './Components/Navbar';
-<<<<<<< Updated upstream
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Contact from './Components/Contact';
-import Footer from './Praveen/Footer';
-=======
+import Footer from './Components/Footer';
 import Banner from './Components/Banner';
+import Signup from './Components/Signup';
 import Categories from './Components/Categories';
->>>>>>> Stashed changes
+import Childrens from './CategoryPages/Childrens';
 
 function App() {
   return (
     <div className="App">
-<<<<<<< Updated upstream
       <BrowserRouter>
-       <Navbar/>
-       <Routes>
-        <Route path='/contact'element={<Contact/>}/>
-       </Routes>
-      
-      <Footer/>
-      </BrowserRouter>
-      
-=======
       <Navbar/>
       <Banner/>
       <Categories/>
->>>>>>> Stashed changes
+      <Contact/>
+       <Routes>
+        <Route path='/Contact'element={<Contact/>}/>
+        <Route path='/Childrens'element={<Childrens/>}/>
+        <Route path='/Signup'element={<Signup/>}/>
+       </Routes>
+      <Footer/>
+      </BrowserRouter>
+      
     </div>
   );
 }
