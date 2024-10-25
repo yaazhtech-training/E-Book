@@ -1,20 +1,30 @@
 import './App.css';
 import Navbar from './Components/Navbar';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import Contact from './Components/Contact';
-import Footer from './Praveen/Footer';
+ //import Contact from './Components/Contact';
+import Footer from './Components/Footer';
+ //import About from './Components/About';
+ //import AuthForm from './Components/AuthFrom';
+import Upload from './Components/Upload';
 
 function App() {
   return (
     <div className="App">
+      
       <BrowserRouter>
        <Navbar/>
        <Routes>
-        <Route path='/contact'element={<Contact/>}/>
+      
+        {/* <Route path='/contact'element={<Contact/>}/>
+        <Route path='/About'element={<About/>}/>
+        <Route path='/login'element={<AuthForm/>}/> */}
+        <Route path='/'element={<Upload/>}/>
+        
        </Routes>
       
       <Footer/>
       </BrowserRouter>
+
       
     </div>
   );

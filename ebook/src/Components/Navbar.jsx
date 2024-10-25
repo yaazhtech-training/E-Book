@@ -13,7 +13,7 @@ const Navbar = () => {
 
       <div className="container mx-auto flex justify-between items-center"> 
 
-        <div className="flex text-center text-2xl font-bold basis-1/3">
+        <div className="flex text-center text-xl font-semibold basis-1/3">
           <span className="text-[2rem] md:text-[2.5rem] lg:text-[3rem]">Yaazh Books</span>
         </div>
 
@@ -25,13 +25,13 @@ const Navbar = () => {
 
           <a href="/Home" className="hover:text-white">Home</a>
           <a href="/Shop" className="hover:text-white">Language</a>
-          <a href="/About" className="hover:text-white">About us</a>
-          <a href="/contact" className="hover:text-white"> <script></script>Contact us</a>
+          <a href="/About" className="hover:text-white"> <script>'./About.jsx'</script>About us</a>
+          <a href="/contact" className="hover:text-white"> <script>'./Contact.jsx'</script>Contact us</a>
 
           <button className="px-4 py-1 bg-[#52585f] text-white rounded-sm font-bold">
-            <a href="/Login" className="">Login</a>
+            <a href="/login" className=""> <script>'./AuthFrom.jsx'</script>Login </a>
                <span> | </span>
-            <a href="/Signup" className="">Sign up</a>
+            <a href="/login" className=""> <script>'./AuthFrom.jsx'</script>Sign up</a>
           </button>
 
         </nav>
@@ -43,6 +43,7 @@ const Navbar = () => {
           <a href="/shop" className="block py-2 hover:text-gray-300">Language</a>
           <a href="/collections" className="block py-2 hover:text-gray-300">About us</a>
           <a href="/contact" className="block py-2 hover:text-gray-300">Contact Us</a>
+          <a href="/upload" className="block py-2 hover:text-gray-300">upload</a>
           <button className="px-4 py-1 bg-[#52585f] text-white rounded-sm font-bold">
             <a href="/Login" className="">Login</a>
                <span> | </span>

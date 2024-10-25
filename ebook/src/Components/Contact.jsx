@@ -47,7 +47,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="mt-4">
-            <label htmlFor="message" className="block text-sm font-medium text-black">Message</label>
+            <label htmlFor="message" className="block text-sm font-medium text-white">Message</label>
             <textarea
               id="message"
               name="message"
