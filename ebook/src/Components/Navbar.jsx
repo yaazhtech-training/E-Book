@@ -16,10 +16,10 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-teal-400 text-gray-800 p-5">
+    <header className="bg-teal-400 text-gray-800 p-3 justify-center items-center">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
-          <span className="text-3xl">Yaazh Books</span>
+          <span className="text-5xl">Yaazh Books</span>
         </div>
 
         {/* Search Input */}
