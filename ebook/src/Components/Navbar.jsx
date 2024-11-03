@@ -27,7 +27,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search by title"
-            className="w-full px-6 py-1 rounded-md focus:outline-none focus:ring-2"
+            className="w-full px-10 py-1 rounded-sm focus:outline-none focus:ring-2"
             value={searchQuery}
             onChange={handleInputChange}
           />
@@ -45,7 +45,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex space-x-8 text-lg font-semibold">
+        <nav className="hidden items-center md:flex space-x-8 text-lg font-semibold">
           <a href="/Home" className="hover:text-white">Home</a>
           <a href="/Shop" className="hover:text-white">Language</a>
           <a href="/About" className="hover:text-white">About Us</a>
