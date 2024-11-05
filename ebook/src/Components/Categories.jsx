@@ -1,101 +1,103 @@
 import React from "react";
+import childrenImage from "../books/children.webp";
+import literatureImage from "../books/literature.jpeg";
+import actionImage from "../books/children.webp";
+import adventureImage from "../books/adventure.jpeg";
+import sportsImage from "../books/sports.jpg";
+import educatImage from "../books/educat.jpeg";
+import fantasyImage from "../books/fantasy.webp";
+import horrorImage from "../books/horror.webp";
+import historyImage from "../books/history.webp";
+import mysteryImage from "../books/mystery.png";
+import natureImage from "../books/nature.webp";
+import scienceImage from "../books/science.webp";
+import bioImage from "../books/bio.jpeg";
+import biographyImage from "../books/biography.jpg";
 
 const Categories = () => {
+
   return (
-    <div className="bg-[#66FCF1]">
-      <h1 className="text-center sm:text-[1.5rem] text-[#0e2b3b] md:text-[3rem] underline font-bold">
+    <div className="bg-[#66FCF1] py-8">
+      <h1 className="text-center text-[#0e2b3b] underline font-bold sm:text-[1.5rem] md:text-[3rem]">
         CATEGORIES
       </h1>
-      <p className="sm:text-[1rem] sm:text-cneter md:text-center lg:text-start md:text-[1.5rem] font-semibold pl-5 font-serif">
+      <p className="font-semibold pl-5 font-serif text-center sm:text-[1rem] md:text-[1.5rem] lg:text-start">
         BROWSE GENRES
       </p>
 
-      <div className="flex flex-wrap justify-center md:justify-evenly gap-6 p-3">
-      
-      <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\literature.jpeg')] bg-cover bg-center w-[125px] h-[125px] sm:w-[120px] sm:h-[120px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-3xl p-2">Literature</h1>
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-4">
+        {[
+          {
+            image: childrenImage,
+            alt: "Children's",
+            name: "Children's",
+          },
+          {
+            image: literatureImage,
+            alt: "Literature",
+            name: "Literature",
+          },
+          {
+            image: educatImage,
+            alt: "Education",
+            name: "Education",
+          },
+          {
+            image: scienceImage,
+            alt: "Science",
+            name: "Science",
+          },
+          {
+            image: biographyImage,
+            alt: "Biography",
+            name: "Biography",
+          },
+          {
+            image: historyImage,
+            alt: "History",
+            name: "History",
+          },
+          {
+            image: fantasyImage,
+            alt: "Fantasy",
+            name: "Fantasy",
+          },
+          {
+            image: horrorImage,
+            alt: "Horror",
+            name: "Horror",
+          },
+          {
+            image: mysteryImage,
+            alt: "Mystery",
+            name: "Mystery",
+          },
+          {
+            image: natureImage,
+            alt: "Nature",
+            name: "Nature",
+          },
+          {
+            image: adventureImage,
+            alt: "Adventure",
+            name: "Adventure",
+          },
+          {
+            image: sportsImage,
+            alt: "Sports",
+            name: "Sports",
+          },
+        ].map((product, index) => (
+          <div
+            key={index}
+            className="w-[125px] h-[110px] py-5 sm:w-[120px] sm:h-[120px] md:w-[210px] md:h-[300px]"
+          >
+            <img src={product.image}
+            alt={product.alt} 
+            className="w-full h-full object-cover" />
+            <h1 className="bg-black opacity-50 text-white text-2xl font-bold mb-4 text-center">{product.name}</h1>
           </div>
-        </div>
-
-      <a href="/Childrens" target="_blank">
-      <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\children.webp')] bg-cover bg-center w-[125px] h-[125px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-3xl p-2">Children's</h1>
-          </div>
-        </div>
-      <script>'\E-Book\ebook\src\CategoryPages\Childrens.jsx'</script></a>
-
-        <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\educat.jpeg')] bg-cover bg-center w-[125px] h-[125px] sm:w-[120px] sm:h-[120px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-3xl p-2">Education</h1>
-          </div>
-        </div>
-       
-     
-        <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\history.webp')] bg-cover bg-center w-[125px] h-[125px] sm:w-[120px] sm:h-[120px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-3xl p-2">History</h1>
-          </div>
-        </div>
-
-        <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\biography.jpg')] bg-cover bg-center w-[125px] h-[125px] sm:w-[120px] sm:h-[120px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-3xl p-2">Biography</h1>
-          </div>
-        </div>
-            
-        <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\fantasy.webp')] bg-cover bg-center w-[125px] h-[125px] sm:w-[120px] sm:h-[120px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-3xl p-2">Fantasy</h1>
-          </div>
-        </div>
-
-        <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\nature.webp')] bg-cover bg-center w-[125px] h-[125px] sm:w-[120px] sm:h-[120px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-3xl p-2">Nature</h1>
-          </div>
-        </div>
-
-        <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\horror.webp')] bg-cover bg-center w-[125px] h-[125px] sm:w-[120px] sm:h-[120px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-3xl p-2">Horror</h1>
-          </div>
-        </div>
-
-        <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\science.webp')] bg-cover bg-center w-[125px] h-[125px] sm:w-[120px] sm:h-[120px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-2xl p-2">
-              Science Fiction
-            </h1>
-          </div>    
-        </div>
-
-        <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\mystery.png')] bg-cover bg-center w-[125px] h-[125px] sm:w-[120px] sm:h-[120px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-1xl p-2">
-              Mystery & Thriller
-            </h1>
-          </div>
-        </div>
-  
-        <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\adventure.jpeg')] bg-cover bg-center w-[125px] h-[125px] sm:w-[120px] sm:h-[120px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-1xl p-2">
-              Action & Adventure
-            </h1>
-          </div>
-        </div>
-
-        <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\books\sports.jpg')] bg-cover bg-center w-[125px] h-[125px] sm:w-[120px] sm:h-[120px] md:w-[200px] md:h-[250px]  object-cover">
-          <div className="place-items-center bg-black opacity-50 ">
-            <h1 className="text-white text-center sm:text-2xl md:text-3xl p-2">Sports</h1>
-          </div>
-        </div>
-       
-      
-      
-        
+        ))}
       </div>
     </div>
   );

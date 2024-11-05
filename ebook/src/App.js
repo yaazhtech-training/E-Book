@@ -30,7 +30,7 @@ function App() {
         <Route path='/login'element={<AuthForm/>}/> */}
         <Route path='/'element={<Upload/>}/>
 
-        <Route path='/Contact'element={<Contact/>}/>
+        {/* <Route path='/Contact'element={<Contact/>}/> */}
         <Route path='/Childrens'element={<Childrens/>}/>
         <Route path='/Signup'element={<Signup/>}/>
        </Routes>
