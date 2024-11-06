@@ -9,26 +9,12 @@ const banners = [
     buttonText2: "Contact us",
     imageUrl: "your-image-url-1.jpg",
   },
-  // {
-  //   title: "GET THE LATEST EBOOK DEALS",
-  //   description:
-  //     "Be the first to know about exclusive discounts on top ebooks. Sign up today to receive updates.",
-  //   buttonText: "Subscribe",
-  //   imageUrl: "your-image-url-2.jpg",
-  // },
-  // {
-  //   title: "DISCOVER NEW AUTHORS",
-  //   description:
-  //     "Explore the world of self-published authors and find your next great read. Free and discounted ebooks just for you.",
-  //   buttonText: "Explore",
-  //   imageUrl: "your-image-url-3.jpg",
-  // },
 ];
 
 const Banner = () => {
   
   return (
-     <div className="bg-[url('C:\Users\ELCOT\dev\github\E-Book\ebook\src\img\bookbg.webp')] bg-bottom bg-cover
+     <div className="bg-[url('../src/img/bookbg.webp')] bg-bottom bg-cover
  h-[60vh] relative w-full overflow-hidden">
 {banners.map((banner, index) => (
       <div className="bg-black bg-opacity-50 h-full flex flex-col text-center text-white justify-center items-center">

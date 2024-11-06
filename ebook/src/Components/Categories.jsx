@@ -1,7 +1,7 @@
 import React from "react";
 import childrenImage from "../books/children.webp";
 import literatureImage from "../books/literature.jpeg";
-import actionImage from "../books/children.webp";
+import actionImage from "../books/action.webp";
 import adventureImage from "../books/adventure.jpeg";
 import sportsImage from "../books/sports.jpg";
 import educatImage from "../books/educat.jpeg";
@@ -11,7 +11,6 @@ import historyImage from "../books/history.webp";
 import mysteryImage from "../books/mystery.png";
 import natureImage from "../books/nature.webp";
 import scienceImage from "../books/science.webp";
-import bioImage from "../books/bio.jpeg";
 import biographyImage from "../books/biography.jpg";
 
 const Categories = () => {
