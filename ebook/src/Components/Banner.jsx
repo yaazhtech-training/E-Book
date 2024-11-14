@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import { FaArrowCircleLeft,FaArrowCircleRight } from "react-icons/fa";
+import Categories from "./Categories";
 const banners = [
   {
     title: "THE ULTIMATE GUIDE TO FREE BOOKS",
@@ -30,15 +32,20 @@ const Banner = () => {
         </div>
         <div className="mt-10">
           <button className="bg-[#66FCF1] hover:text-gray-500 text-white font-bold py-2 px-4 rounded mr-4">
-            <a href="">{banner.buttonText}</a>
+            <a href="/About"> <script>'./About.jsx'</script>{banner.buttonText}</a>
           </button>
           <button className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
-            <a href="">{banner.buttonText2}</a>
+            <a href="/Contact"><script>'./Contact.jsx'</script>{banner.buttonText2}</a>
           </button>
         </div>
+
+
       
       </div>
     ))}
+    <Categories/>
+   
+    
     </div>
   );
 };

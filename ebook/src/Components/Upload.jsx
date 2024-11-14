@@ -1,43 +1,61 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Upload = () => {
+  const [file, setFile] = useState(null);
+  const [error, setError] = useState('');
 
-const [file,setFile]= useState()
+  const maxFileSize = 100 * 1024 * 1024;
 
-function handleFile (event) {
-    setFile (event.target.files[0])
-    // console.log (event.target.files[0])
-}
- function handleUpload(){
-    const formData = new FormData()
-    formData.append ('file',file)
-    fetch(
-        'url',
-        {
-            method:"POST",
-            body :formData 
+  
+  function handleFile(event) {
+    const selectedFile = event.target.files[0];
+    if (selectedFile) {
+      
+      if (selectedFile.size > maxFileSize) {
+        setError('File size exceeds the 100 MB limit.');
+        setFile(null); 
+      } else {
+        setError('');
+        setFile(selectedFile);
+      }
+    }
+  }
 
-        }
-    ).then((response)=> response.json()).then(
-        (result) =>{
-            console.log('success',result)
-        }
-    )
-    .catch(error => {
-        console.error("Error:",error)
+  function handleUpload(event) {
+    event.preventDefault(); 
+
+    if (!file) {
+      setError('Please select a valid file.');
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    fetch('url', {
+      method: 'POST',
+      body: formData,
     })
-    
- }
+      .then((response) => response.json())
+      .then((result) => {
+        console.log('Success:', result);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
+
   return (
     <div>
-      <h2>upload file</h2>
-      <form onSubmit={handleUpload}>
-        <input  type='file' name='file' onChange={handleFile} />
-        <button>upload</button>
-      </form>
-      
-    </div>
-  )
-}
+      <h2 className ='text-xl font-semibold' >Upload doc</h2>
+      {error && <p style={{ color: 'red' }}>{error}</p>} 
 
-export default Upload
+      <form onSubmit={handleUpload}>
+        <input type="file" name="file" onChange={handleFile} />
+        <button type="submit" disabled={!file}>Upload</button>
+      </form>
+    </div>
+  );
+};
+
+export default Upload;
