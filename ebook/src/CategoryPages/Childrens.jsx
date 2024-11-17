@@ -73,13 +73,16 @@ const Childrens = () => {
           },
           // Add more book objects as needed
         ].map((product, index) => (
-          <div key={index} className="text-center">
+          <div key={index} className="text-center w-[125px] h-[110px] py-5 sm:w-[120px] sm:h-[120px] md:w-[210px] md:h-[280px]">
             <img
               src={product.image}
               alt={product.name}
-              className="w-[200px] h-[200px] object-cover mx-auto"
+              className="w-full h-full object-cover mx-auto"
             />
             <h1 className="text-black font-bold">{product.name}</h1>
+            <button className="flex items-center justify-center bg-[#66FCF1] text-[#1F2833] px-4 mt-2 rounded-sm font-bold mx-auto">
+               Upload
+             </button>
           </div>
         ))}
       </div>

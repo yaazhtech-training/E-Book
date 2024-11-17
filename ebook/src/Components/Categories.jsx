@@ -30,70 +30,84 @@ const Categories = () => {
             image: childrenImage,
             alt: "Children's",
             name: "Children's",
+            navigate:"/Childrens",
           },
           {
             image: literatureImage,
             alt: "Literature",
             name: "Literature",
+            navigate:"/Literature",
           },
           {
             image: educatImage,
             alt: "Education",
             name: "Education",
+            navigate:"/Education",
           },
           {
             image: scienceImage,
             alt: "Science",
             name: "Science",
+            navigate:"/Science",
           },
           {
             image: biographyImage,
             alt: "Biography",
             name: "Biography",
+            navigate:"/Biography",
           },
           {
             image: historyImage,
             alt: "History",
             name: "History",
+            navigate:"/History",
           },
           {
             image: fantasyImage,
             alt: "Fantasy",
             name: "Fantasy",
+            navigate:"/Fantasy",
           },
           {
             image: horrorImage,
             alt: "Horror",
             name: "Horror",
+            navigate:"/Horror",
           },
           {
             image: mysteryImage,
             alt: "Mystery",
             name: "Mystery",
+            navigate:"/Mystery",
           },
           {
             image: natureImage,
             alt: "Nature",
             name: "Nature",
+            navigate:"/Nature",
           },
           {
             image: adventureImage,
             alt: "Adventure",
             name: "Adventure",
+            navigate:"/Adventure",
           },
           {
             image: sportsImage,
             alt: "Sports",
             name: "Sports",
+            navigate:"/Sports",
           },
         ].map((product, index) => (
           <div
             key={index}
             className="w-[125px] h-[110px] py-5 sm:w-[120px] sm:h-[120px] md:w-[210px] md:h-[300px]"
           >
-            <img src={product.image}
+           <a href={product.navigate}>
+             <img src={product.image}
             alt={product.alt} 
             className="w-full h-full object-cover" />
+           </a>
             <h1 className="bg-black opacity-50 text-white text-2xl font-bold mb-4 text-center">{product.name}</h1>
           </div>
         ))}

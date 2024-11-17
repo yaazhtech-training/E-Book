@@ -8,7 +8,7 @@ import { FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#66FCF1] text-black py-10 px-5 md:px-10 lg:px-20 mt-96 font-bolt">
+    <footer className="bg-[#66FCF1] text-black py-10 px-5 md:px-10 lg:px-20 font-bolt">
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10">
         <div>
           <h2 className="text-2xl font-bold mb-4">E-Book</h2>
