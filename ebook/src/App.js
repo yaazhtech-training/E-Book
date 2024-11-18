@@ -27,12 +27,12 @@ function App() {
         
         <Route path='/About'element={<About/>}/>
         
-        <Route path='/home'element={<Banner/>}/>
+        <Route path='/'element={<Banner/>}/>
 
         
 
          <Route path='/upload'element={<Upload/>}/>
-         <Route path='/'element={<Categories/>}/>
+         <Route path='/categories'element={<Categories/>}/>
 
          <Route path='/Contact'element={<Contact/>}/> 
         <Route path='/Childrens'element={<Childrens/>}/>
