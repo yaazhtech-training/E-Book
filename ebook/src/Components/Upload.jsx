@@ -83,7 +83,7 @@ const Upload = () => {
       }
     }
   }
-
+  console.log("selectedFile :",file);
   function handleUpload(event) {
     event.preventDefault();
     
@@ -102,7 +102,7 @@ const Upload = () => {
       method: 'POST',
       body: formData,
     })
-      .then((response) => response.json())
+     // .then((response) => response.json())
       .then((result) => {
         console.log('Success:', result);
         setIsUploading(false); // Set uploading state to false
