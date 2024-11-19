@@ -13,6 +13,7 @@ import Signup from './Components/Signup';
 import Categories from './Components/Categories';
 import Childrens from './CategoryPages/Childrens';
 
+
 function App() {
   return (
     <div className="App">
@@ -28,11 +29,12 @@ function App() {
         <Route path='/About'element={<About/>}/>
         
         <Route path='/'element={<Banner/>}/>
+        
 
         
 
          <Route path='/upload'element={<Upload/>}/>
-         <Route path='/categories'element={<Categories/>}/>
+         <Route path='/'element={<Categories/>}/>
 
          <Route path='/Contact'element={<Contact/>}/> 
         <Route path='/Childrens'element={<Childrens/>}/>

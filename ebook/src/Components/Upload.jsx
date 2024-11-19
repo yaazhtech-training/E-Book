@@ -59,13 +59,15 @@
 // };
 
 // export default Upload;
+
+
 import React, { useState } from 'react';
 
 const Upload = () => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState('');
-  const [isUploading, setIsUploading] = useState(false); // Track upload state
-  const [uploadSuccess, setUploadSuccess] = useState(false); // Track success state
+  const [isUploading, setIsUploading] = useState(false); 
+  const [uploadSuccess, setUploadSuccess] = useState(false); 
 
   const maxFileSize = 100 * 1024 * 1024;
 
@@ -90,8 +92,8 @@ const Upload = () => {
       return;
     }
 
-    setIsUploading(true); // Set uploading state to true
-    setUploadSuccess(false); // Reset success state
+    setIsUploading(true); 
+    setUploadSuccess(false); 
 
     const formData = new FormData();
     formData.append('file', file);

@@ -16,9 +16,8 @@ const banners = [
 const Banner = () => {
   
   return (
-    <div>
-       <div className="bg-[url('../src/img/bookbg.webp')] w-full h-[50vh] bg-bottom bg-cover 
- relative overflow-hidden">
+     <div className="bg-[url('../src/img/bookbg.webp')] bg-bottom bg-cover                                                                     
+ relative w-full overflow-hidden"> 
 {banners.map((banner, index) => (
       <div className="bg-black bg-opacity-50 h-full flex flex-col text-center text-white justify-center items-center">
       
@@ -44,11 +43,9 @@ const Banner = () => {
       
       </div>
     ))}
-    
+    <Categories/>
    
     
-    </div>
-    <Categories/>
     </div>
   );
 };
