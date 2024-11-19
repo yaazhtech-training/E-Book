@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { FaArrowCircleLeft,FaArrowCircleRight } from "react-icons/fa";
 import Categories from "./Categories";
 const banners = [
   {
@@ -23,7 +22,7 @@ const Banner = () => {
       
 
         <div  key={index} className="">
-          <h1 className="sm:text-[1.5rem] md:text-[2rem] lg:text-[3rem] font-sans font-bold">
+          <h1 className="sm:text-[2rem] md:text-[2rem] lg:text-[3rem] font-sans font-bold">
             {banner.title}
           </h1>
           <h1 className="sm:text-[1rem] md:text-[1.5rem]  font-bold ">
