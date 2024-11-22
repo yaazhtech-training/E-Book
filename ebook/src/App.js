@@ -20,26 +20,17 @@ function App() {
       
       <BrowserRouter>
       <Navbar/>
-     
-      
        <Routes>
 
-      
-        
         <Route path='/About'element={<About/>}/>
-        
         <Route path='/'element={<Banner/>}/>
-        
-
-        
-
          <Route path='/upload'element={<Upload/>}/>
          <Route path='/'element={<Categories/>}/>
-
          <Route path='/Contact'element={<Contact/>}/> 
         <Route path='/Childrens'element={<Childrens/>}/>
         <Route path='/authform'element={<AuthForm/>}/>
         <Route path='/Signup'element={<Signup/>}/>
+
        </Routes>
       <Footer/> 
       </BrowserRouter>
