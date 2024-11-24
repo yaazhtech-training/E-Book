@@ -90,14 +90,17 @@ const Categories = () => {
   ];
 
   return (
+    <div>
     <div className="bg-[#66FCF1] py-8">
-      {/* Header */}
-      <h1 className="text-center text-[#0e2b3b] underline font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+     
+     <div>
+     <h1 className="text-center text-[#0e2b3b] underline font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
         CATEGORIES
       </h1>
       <p className="font-semibold pl-5 font-serif text-center sm:text-lg md:text-xl lg:text-start">
         BROWSE GENRES
       </p>
+     </div>
 
       {/* Category Grid */}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 p-4">
@@ -123,6 +126,7 @@ const Categories = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
