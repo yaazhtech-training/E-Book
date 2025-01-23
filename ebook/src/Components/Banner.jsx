@@ -16,7 +16,7 @@ const Banner = () => {
     <div>
       <div className="bg-[url('../src/img/bookbg.webp')] bg-bottom bg-cover w-full">
         {banners.map((banner, index) => (
-          <div className="bg-black bg-opacity-50 h-full text-center text-white justify-center items-center">
+          <div className=" h-full text-center text-white justify-center items-center">
             <div key={index} className="">
               <h1 className="sm:text-[2rem] md:text-[2rem] lg:text-[3rem] font-sans font-bold">
                 {banner.title}
