@@ -85,9 +85,11 @@ const Childrens = () => {
               <h1 className="text-black font-bold mt-3 text-sm sm:text-base">
                 {book.name}
               </h1>
+              <a href="/upload">
               <button className="mt-3 px-4 py-2 bg-[#66FCF1] text-[#1F2833] rounded-sm font-bold hover:bg-[#45E0D3]">
                 Upload
               </button>
+              </a>
             </div>
           ))}
         </div>

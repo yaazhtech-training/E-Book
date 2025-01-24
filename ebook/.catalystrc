@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "12717000000007120",
+      "name": "YaazhTech--E-book",
+      "domain": {
+        "id": "50024661877",
+        "name": "yaazhtech--e-book-60036803716.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60036803716",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

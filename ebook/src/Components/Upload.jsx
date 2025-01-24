@@ -1,136 +1,112 @@
-// import React, { useState } from 'react';
+import React, { useState } from "react";
 
-// const Upload = () => {
-//   const [file, setFile] = useState(null);
-//   const [error, setError] = useState('');
-
-//   const maxFileSize = 100 * 1024 * 1024;
+const EbookUploadPage = () => {
+  const [file, setFile] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [uploadedFileURL, setUploadedFileURL] = useState(null);
 
   
-//   function handleFile(event) {
-//     const selectedFile = event.target.files[0];
-//     if (selectedFile) {
-      
-//       if (selectedFile.size > maxFileSize) {
-//         setError('File size exceeds the 100 MB limit.');
-//         setFile(null); 
-//       } else {
-//         setError('');
-//         setFile(selectedFile);
-//       }
-//     }
-//   }
-
-//   function handleUpload(event) {
-//     event.preventDefault(); 
-
-//     if (!file) {
-//       setError('Please select a valid file.');
-//       return;
-//     }
-
-//     const formData = new FormData();
-//     formData.append('file', file);
-
-//     fetch('url', {
-//       method: 'POST',
-//       body: formData,
-//     })
-//       .then((response) => response.json())
-//       .then((result) => {
-//         console.log('Success:', result);
-//       })
-//       .catch((error) => {
-//         console.error('Error:', error);
-//       });
-//   }
-
-//   return (
-//     <div>
-//       <h2 className ='text-xl font-semibold' >Upload doc</h2>
-//       {error && <p style={{ color: 'red' }}>{error}</p>} 
-
-//       <form onSubmit={handleUpload}>
-//         <input type="file" name="file" onChange={handleFile} />
-//         <button type="submit" disabled={!file}>Upload</button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Upload;
-
-
-import React, { useState } from 'react';
-
-const Upload = () => {
-  const [file, setFile] = useState(null);
-  const [error, setError] = useState('');
-  const [isUploading, setIsUploading] = useState(false); 
-  const [uploadSuccess, setUploadSuccess] = useState(false); 
-
-  const maxFileSize = 100 * 1024 * 1024;
-
-  function handleFile(event) {
+  const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
     if (selectedFile) {
-      if (selectedFile.size > maxFileSize) {
-        setError('File size exceeds the 100 MB limit.');
-        setFile(null); 
+      if (selectedFile.size > 100 * 1024 * 1024) {
+        // 100 MB limit
+        setErrorMessage("File size exceeds 100 MB!");
+        setFile(null);
       } else {
-        setError('');
+        setErrorMessage("");
         setFile(selectedFile);
       }
     }
-  }
-  console.log("selectedFile :",file);
-  function handleUpload(event) {
-    event.preventDefault();
-    
-    if (!file) {
-      setError('Please select a valid file.');
-      return;
+  };
+
+ 
+  const handleUploadFile = () => {
+    if (file) {
+      const fileURL = URL.createObjectURL(file);
+      alert("fileName"+JSON.stringify(fileURL));
+      setUploadedFileURL(fileURL); 
+      alert(`File "${file.name}" has been uploaded successfully!`);
+    } else {
+      alert("Please select a file before uploading.");
     }
-
-    setIsUploading(true); 
-    setUploadSuccess(false); 
-
-    const formData = new FormData();
-    formData.append('file', file);
-
-    fetch('url', {
-      method: 'POST',
-      body: formData,
-    })
-     // .then((response) => response.json())
-      .then((result) => {
-        console.log('Success:', result);
-        setIsUploading(false); // Set uploading state to false
-        setUploadSuccess(true); // Set success state
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        setIsUploading(false); // Set uploading state to false
-        setError('Upload failed. Please try again.'); // Set error message on failure
-      });
-  }
+  };
 
   return (
-    <div className='container relative border-2 border-blue-500 border-dashed mt-10 mx-auto  p-20 rounded-xl'>
-      <h2 className="text-xl font-semibold -mt-10">Upload doc</h2>
-      {error && <p className='mt-24' style={{ color: 'red' }}>{error}</p>}
-      {uploadSuccess && <p style={{ color: 'green' }}>Upload successful!</p>} 
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-5">
+      <div className="bg-white shadow-md rounded-md p-6 w-full max-w-lg">
+        <h1 className="text-2xl font-bold text-center mb-4">Upload Your eBook</h1>
 
-      <form onSubmit={handleUpload}>
-        <input type="file" name="file" onChange={handleFile} />
-        {/* <div className='flex justify-center '> */}
-        <button className=' absolute rounded-xl bg-blue-400  p-2 ' type="submit" disabled={!file || isUploading}>
-          {isUploading ? 'Uploading...' : 'Upload'} 
-        </button>
-        {/* </div> */}
-      </form>
+        <div className="mb-4">
+          <label
+            htmlFor="fileUpload"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
+            Select an eBook file (Max: 100 MB)
+          </label>
+          <input
+            type="file"
+            id="fileUpload"
+            className="block w-full text-sm text-gray-700 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            onChange={handleFileChange}
+            accept=".pdf,.epub,.mobi"
+          />
+        </div>
+
+        {errorMessage && (
+          <p className="text-red-500 text-sm mb-4">{errorMessage}</p>
+        )}
+
+        {file && (
+          <div className="mb-4">
+            <p className="text-sm text-gray-700">
+              Selected File: <span className="font-medium">{file.name}</span>
+            </p>
+            <p className="text-sm text-gray-700">
+              File Size:{" "}
+              <span className="font-medium">
+                {(file.size / (1024 * 1024)).toFixed(2)} MB
+              </span>
+            </p>
+          </div>
+        )}
+
+        <div className="flex justify-center space-x-4">
+          {file && (
+            <button
+              onClick={handleUploadFile}
+              className="px-4 py-2 bg-green-500 text-white text-sm font-medium rounded-md hover:bg-green-600 transition"
+            >
+              Upload File
+            </button>
+          )}
+          <button
+            onClick={() => {
+              setFile(null);
+              setUploadedFileURL(null);
+              setErrorMessage("");
+            }}
+            className="px-4 py-2 bg-red-500 text-white text-sm font-medium rounded-md hover:bg-red-600 transition"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+      {/* Display the uploaded file */}
+      {uploadedFileURL && (
+        <div className="bg-white shadow-md rounded-md p-6 w-full max-w-lg mt-6">
+          <h2 className="text-xl font-bold text-center mb-4">View Your eBook</h2>
+          <div className="w-full h-96 overflow-auto border border-gray-300 rounded-md">
+            <iframe
+              src={uploadedFileURL}
+              title="eBook Viewer"
+              className="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default Upload;
+export default EbookUploadPage;
