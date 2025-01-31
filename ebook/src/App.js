@@ -12,6 +12,7 @@ import Banner from './Components/Banner';
 import Signup from './Components/Signup';
 import Categories from './Components/Categories';
 import Childrens from './CategoryPages/Childrens';
+import ViewFile from './Components/ViewFile';
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
         <Route path='/Childrens'element={<Childrens/>}/>
         <Route path='/authform'element={<AuthForm/>}/>
         <Route path='/Signup'element={<Signup/>}/>
+        <Route path='/view'element={<ViewFile/>}/>
+
 
        </Routes>
       <Footer/> 
