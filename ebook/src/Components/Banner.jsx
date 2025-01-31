@@ -56,10 +56,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Categories from "./Categories";
-import banner from "../img/banner.jpg";
-import banner2 from "../img/banner2.jpg";
+import banner2 from "../img/banner.jpg";
+import banner from "../img/bookbg.webp";
 import banner3 from "../img/banner3.jpg";
-import banner4 from "../img/banner4.jpg";
+import banner4 from "../img/bg1.webp";
 
 const Home = () => {
   const settings = {
