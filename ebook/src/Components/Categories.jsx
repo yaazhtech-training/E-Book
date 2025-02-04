@@ -1,17 +1,17 @@
+
 import React from "react";
-import childrenImage from "../books/children.webp";
-import literatureImage from "../books/literature.jpeg";
-import actionImage from "../books/action.webp";
-import adventureImage from "../books/adventure.jpeg";
-import sportsImage from "../books/sports.jpg";
-import educatImage from "../books/educat.jpeg";
-import fantasyImage from "../books/fantasy.webp";
-import horrorImage from "../books/horror.webp";
-import historyImage from "../books/history.webp";
-import mysteryImage from "../books/mystery.png";
-import natureImage from "../books/nature.webp";
-import scienceImage from "../books/science.webp";
-import biographyImage from "../books/biography.jpg";
+import childrenImage from "../books/Categoryimg/children.webp";
+import literatureImage from "../books/Categoryimg/literature.jpeg";
+import adventureImage from "../books/Categoryimg/adventure.jpeg";
+import sportsImage from "../books/Categoryimg/sports.jpg";
+import educatImage from "../books/Categoryimg/educat.jpeg";
+import fantasyImage from "../books/Categoryimg/fantasy.webp";
+import horrorImage from "../books/Categoryimg/horror.webp";
+import historyImage from "../books/Categoryimg/history.webp";
+import mysteryImage from "../books/Categoryimg/mystery.png";
+import natureImage from "../books/Categoryimg/nature.webp";
+import scienceImage from "../books/Categoryimg/science.webp";
+import biographyImage from "../books/Categoryimg/biography.jpg";
 
 const Categories = () => {
   const categories = [

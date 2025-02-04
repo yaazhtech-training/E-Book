@@ -13,6 +13,7 @@ import Signup from './Components/Signup';
 import Categories from './Components/Categories';
 import Childrens from './Components/Childrens';
 import PdfViewer from './Components/PdfViewer';
+import DragonBook from './books/Books/DragonBook'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path='/authform'element={<AuthForm/>}/>
         <Route path='/Signup'element={<Signup/>}/>
         <Route path='/pdf'element={<PdfViewer/>}/>
+        <Route path='/dragon' element={<DragonBook/>}/>
 
 
 
