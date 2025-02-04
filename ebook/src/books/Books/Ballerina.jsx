@@ -1,37 +1,23 @@
 import React, { useState } from 'react';
-import dragonb1 from '../DragonBookImg/dragoB1.png';
-import dragonb2 from '../DragonBookImg/dragoB2.png';
-import dragonb3 from '../DragonBookImg/dragoB3.png';
-import dragonb4 from '../DragonBookImg/dragoB4.png';
-import dragonb5 from '../DragonBookImg/dragoB5.png';
-import dragonb6 from '../DragonBookImg/dragoB6.png';
-import dragonb7 from '../DragonBookImg/dragoB7.png';
-import dragonb8 from '../DragonBookImg/dragoB8.png';
-import dragonb9 from '../DragonBookImg/dragoB9.png';
-import dragonb10 from '../DragonBookImg/dragoB10.png';
-import dragonb11 from '../DragonBookImg/dragoB11.png';
-import dragonb12 from '../DragonBookImg/dragoB12.png';
-import dragonb13 from '../DragonBookImg/dragoB13.png';
-import dragonb14 from '../DragonBookImg/dragoB14.png';
-import dragonb15 from '../DragonBookImg/dragoB15.png';
+import ballerina1 from '../Ballerina/ballerina1.png';
+import ballerina2 from '../Ballerina/ballerina2.png';
+import ballerina3 from '../Ballerina/ballerina3.png';
+import ballerina4 from '../Ballerina/ballerina4.png';
+import ballerina5 from '../Ballerina/ballerina5.png';
+import ballerina6 from '../Ballerina/ballerina6.png';
 
-const DragonBookCarousel = () => {
+
+
+const Ballerina = () => {
   const images = [
-    { src: dragonb1, alt: 'DragonBook1' },
-    { src: dragonb2, alt: 'DragonBook2' },
-    { src: dragonb3, alt: 'DragonBook3' },
-    { src: dragonb4, alt: 'DragonBook4' },
-    { src: dragonb5, alt: 'DragonBook5' },
-    { src: dragonb6, alt: 'DragonBook6' },    
-    { src: dragonb7, alt: 'DragonBook7' },
-    { src: dragonb8, alt: 'DragonBook8' },
-    { src: dragonb9, alt: 'DragonBook9' },
-    { src: dragonb10, alt: 'DragonBook10' },
-    { src: dragonb11, alt: 'DragonBook11' },
-    { src: dragonb12, alt: 'DragonBook12' },
-    { src: dragonb13, alt: 'DragonBook13' },
-    { src: dragonb14, alt: 'DragonBook14' },
-    { src: dragonb15, alt: 'DragonBook15' },
+    { src:ballerina1, alt: 'ballerina1' },
+    { src:ballerina2, alt: 'ballerina2' },
+    { src:ballerina3, alt: 'ballerina3' },
+    { src:ballerina4, alt: 'ballerina4' },
+    { src:ballerina5, alt: 'ballerina5' },
+    { src:ballerina6, alt: 'ballerina6' },
+  
+ 
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,11 +36,10 @@ const DragonBookCarousel = () => {
   };
 
   const handleClose = () => {
-    setIsOpen(false); // Close the carousel
+    setIsOpen(false); 
   };
 
-  if (!isOpen) return null; // Do not render the carousel if it's closed
-
+  if (!isOpen) return null;
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75">
       <button
@@ -90,4 +75,4 @@ const DragonBookCarousel = () => {
   );
 };
 
-export default DragonBookCarousel;
+export default Ballerina;

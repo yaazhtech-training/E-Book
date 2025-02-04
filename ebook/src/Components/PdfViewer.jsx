@@ -1,39 +1,52 @@
-import React, { useState } from "react";
-import { Document, Page } from "react-pdf";
-import { Worker } from "@react-pdf-viewer/core";
-import HTMLFlipBook from "react-pageflip";
-import "@react-pdf-viewer/core/lib/styles/index.css";
- 
-const PdfViewer = ({ pdfFile, onClose }) => {
+import { useState } from "react";
+import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import "react-pdf/dist/esm/Page/TextLayer.css";
+
+// Set worker source for PDF rendering
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+export default function PdfViewer() {
   const [numPages, setNumPages] = useState(null);
- 
+  const [pageNumber, setPageNumber] = useState(1);
+
+  const pdfUrl = "./"; // Path to the PDF file
+
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
+
   return (
-<div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center">
-<div className="relative w-4/5 h-5/6 bg-white shadow-xl rounded-lg p-4">
-<button
-          className="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full"
-          onClick={onClose}
->
-          Close
-</button>
- 
-        <Worker workerUrl="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.worker.min.js">
-<Document
-            file={pdfFile}
-            onLoadSuccess={({ numPages }) => setNumPages(numPages)} // Set pages only once
->
-<HTMLFlipBook width={600} height={800} flippingTime={600}>
-              {Array.from(new Array(numPages), (_, index) => (
-<div key={index}>
-<Page pageNumber={index + 1} width={600} />
-</div>
-              ))}
-</HTMLFlipBook>
-</Document>
-</Worker>
-</div>
-</div>
+    <div className="flex flex-col items-center min-h-screen bg-gray-100 p-4">
+      <h1 className="text-2xl font-bold mb-4">Dragon School PDF</h1>
+
+      {/* PDF Viewer */}
+      <div className="w-full max-w-3xl bg-white p-4 shadow-lg rounded-lg">
+        <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess} className="flex justify-center">
+          <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
+        </Document>
+
+        {/* Pagination */}
+        <div className="flex justify-between mt-4">
+          <button
+            onClick={() => setPageNumber((prev) => Math.max(prev - 1, 1))}
+            disabled={pageNumber === 1}
+            className="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
+          >
+            Previous
+          </button>
+          <p className="text-lg">
+            Page {pageNumber} of {numPages}
+          </p>
+          <button
+            onClick={() => setPageNumber((prev) => Math.min(prev + 1, numPages))}
+            disabled={pageNumber === numPages}
+            className="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
   );
-};
- 
-export default PdfViewer;
+}
