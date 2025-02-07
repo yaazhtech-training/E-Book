@@ -25,7 +25,7 @@ const Categories = () => {
       image: literatureImage,
       alt: "Literature",
       name: "Literature",
-      navigate: "/Literature",
+      navigate: "/literature",
     },
     {
       image: educatImage,

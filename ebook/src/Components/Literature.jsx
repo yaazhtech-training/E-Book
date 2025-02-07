@@ -1,71 +1,44 @@
 import React, { useState, useRef } from 'react';
 import Modal from 'react-modal';
 
-///books overView image 
-import ballerinaImg from './booksImg/ballerina.png'
-import gaint from './booksImg/gaint.png'
-import dragon from './booksImg/dragon.png'
-import magnet from './booksImg/magnet magic.png'
-import thebesttube from './booksImg/thebesttube.png'
-import theFish from './booksImg/theFish.png'
-import thelostbee from './booksImg/thelostbee.png'
+//image 
+import murudanyagamImg from './litImg/murudanayagam.jpeg'
+import PonniyinSelvanImg from './litImg/ponniyinSelvan.jpg'
+import tennaliImg from './litImg/tennali.jpg'
 
 
-//importing a pdf 
-import dragonpdf from "./PDFile/DragonSchool.pdf";
-import Gaintpdf from "./PDFile/Gaint.pdf";
-import Ballerinapdf from "./PDFile/Ballerina.pdf";
-import Magnetmagicpdf from "./PDFile/MagnetMagic.pdf";
-import thebesttubepdf from "./PDFile/thebesttube.pdf";
-import thefishpdf from "./PDFile/thefish.pdf";
-import thelostbeepdf from "./PDFile/thelostbee.pdf";
+
+//pdf importing...
+import murudanyagamPdf from './Assetes/literaturePdf/murudanyagam.pdf';
+import PonniyinSelvanPdf from './Assetes/literaturePdf/PonniyinSelvan.pdf';
+import TennaliRamanPdf from './Assetes/literaturePdf/tenaliraman.pdf';
 
 
 
 
+Modal.setAppElement('#root');
 
-Modal.setAppElement('#root'); // Set the root element for accessibility
-
-const Childrens = () => {
+const Literature = () => {
   const [selectedBook, setSelectedBook] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const iframeRef = useRef(null);
 
   const books = [
-    { image:gaint,
-       alt: 'Gaint wants to play',
-       name: 'Gaint wants to play', 
-       path: Gaintpdf },
+    { image:murudanyagamImg,
+       alt: 'Murudanayagam',
+       name: 'Murudanayagam', 
+       path: murudanyagamPdf },
 
-    { image: dragon,
-      alt: 'Dragon Book',
-       name: 'Dragon Book', 
-       path: dragonpdf },
+    { image: PonniyinSelvanImg,
+      alt: 'Ponniyin Selvan',
+       name: 'Ponniyin Selvan', 
+       path: PonniyinSelvanPdf },
 
-    { image: ballerinaImg,
-       alt: 'Ballerina',
-        name: 'Ballerina',
-         path: Ballerinapdf },
+    { image: tennaliImg,
+       alt: 'Tennali Raman',
+        name: 'Tennali Raman',
+         path: TennaliRamanPdf },
 
-         { image: magnet,
-          alt: 'Magnet Magic',
-           name: 'Magnet Magic',
-            path: Magnetmagicpdf },
-            
-            { image: thebesttube,
-              alt: 'The Best Tube',
-               name: 'The Best Tube',
-                path: thebesttubepdf },
-
-                { image:theFish,
-                  alt: 'The Little Fish Goes Deep',
-                   name: 'The Little Fish Goes Deep',
-                    path: thefishpdf },
-
-                    { image:thelostbee,
-                      alt: 'The Lost Bee',
-                       name: 'The Lost Bee',
-                        path: thelostbeepdf },
   ];
   const openModal = (path) => {
     setSelectedBook(path);
@@ -136,4 +109,4 @@ const Childrens = () => {
   );
 };
 
-export default Childrens;
+export default Literature ;

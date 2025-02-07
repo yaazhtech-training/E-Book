@@ -10,7 +10,7 @@ export default function PdfViewer() {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
-  const pdfUrl = "./"; // Path to the PDF file
+  const pdfUrl = "https://bookbot-web.pages.dev/#/"; // Path to the PDF file
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
@@ -50,3 +50,26 @@ export default function PdfViewer() {
     </div>
   );
 }
+
+// import React from "react";
+// import { Document, Page, pdfjs } from "react-pdf";
+// import pdfWorker from "pdfjs-dist/build/pdf.worker.min.js"; // Import local worker
+
+// // Set worker source to local worker file
+// pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
+
+// const EbookUploadPage = ({ pdfFileName }) => {
+//   return (
+//     <div>
+//       {pdfFileName ? (
+//         <Document file={`/uploads/${pdfFileName}`}>
+//           <Page pageNumber={1} />
+//         </Document>
+//       ) : (
+//         <p>Please select a PDF file.</p>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default EbookUploadPage;

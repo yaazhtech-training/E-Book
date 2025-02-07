@@ -13,10 +13,7 @@ import Signup from './Components/Signup';
 import Categories from './Components/Categories';
 import Childrens from './Components/Childrens';
 import PdfViewer from './Components/PdfViewer';
-import DragonBook from './books/Books/DragonBook'
-import Gaints from './books/Books/Gaints';
-import Ballerina from './books/Books/Ballerina';
-
+import Literature from './Components/Literature';
 
 function App() {
   return (
@@ -31,16 +28,14 @@ function App() {
          <Route path='/upload'element={<Upload/>}/>
          <Route path='/'element={<Categories/>}/>
          <Route path='/Contact'element={<Contact/>}/> 
-        <Route path='/Childrens'element={<Childrens/>}/>
+       
         <Route path='/authform'element={<AuthForm/>}/>
         <Route path='/Signup'element={<Signup/>}/>
         <Route path='/pdf'element={<PdfViewer/>}/>
 
         {/* Books */}
-        <Route path='/dragon' element={<DragonBook/>}/>
-        <Route path='/gaints' element={<Gaints/>}/>
-        <Route path='/ballerina' element={<Ballerina/>}/>
-
+        <Route path='/Childrens'element={<Childrens/>}/>
+        <Route path='/literature'element={<Literature/>}/>
 
        </Routes>
       <Footer/> 
