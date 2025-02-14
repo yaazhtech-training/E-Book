@@ -9,7 +9,7 @@ import fantasyImage from "../books/Categoryimg/fantasy.webp";
 import horrorImage from "../books/Categoryimg/horror.webp";
 import historyImage from "../books/Categoryimg/history.webp";
 import mysteryImage from "../books/Categoryimg/mystery.png";
-import natureImage from "../books/Categoryimg/nature.webp";
+import selfImg from "./Selfimg/self.jpg";
 import scienceImage from "../books/Categoryimg/science.webp";
 import biographyImage from "../books/Categoryimg/biography.jpg";
 
@@ -26,6 +26,13 @@ const Categories = () => {
       alt: "Literature",
       name: "Literature",
       navigate: "/literature",
+    },
+
+    {
+      image: selfImg,
+      alt: "SelfImporvement",
+      name: "Self-Imporvement",
+      navigate: "/self",
     },
     {
       image: educatImage,
@@ -69,12 +76,7 @@ const Categories = () => {
       name: "Mystery",
       navigate: "/Mystery",
     },
-    {
-      image: natureImage,
-      alt: "Nature",
-      name: "Nature",
-      navigate: "/Nature",
-    },
+   
     {
       image: adventureImage,
       alt: "Adventure",
