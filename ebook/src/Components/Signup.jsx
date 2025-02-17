@@ -2,25 +2,25 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     password: "",
-//   });
-//   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  //const navigate = useNavigate();
 
-//   const handleChange = (e) => {
-//     setFormData({ ...formData, [e.target.value]: e.target.value });
-//   };
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.value]: e.target.value });
+  };
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     if (isSignup) {
-//       console.log("Sign Up Data:", formData);
-//     } else {
-//       console.log("Login Data:", formData);
-//     }
-//   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (formData.password) {
+      console.log("Sign Up Data:", formData);
+    } else {
+      console.log("Login Data:", formData);
+    }
+  };
 
   return (
     <div className="bg-[#66FCF1] h-screen w-full  flex flex-col items-center p-4">
@@ -41,8 +41,8 @@ const Signup = () => {
             <input
               type="text"
               placeholder="Name"
-            //   value={formData.name}
-            //   onChange={handleChange}
+              value={formData.name}
+              onChange={handleChange}
               className="w-full px-6 py-1 rounded-sm focus:outline-none focus:ring-2 focus:ring-red-500"
             />
           </div>
@@ -52,8 +52,8 @@ const Signup = () => {
             </label>
             <input
               type="text"
-            //   value={formData.email}
-            //   onChange={handleChange}
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Enter Your Email"
               className="w-full px-6 py-1 rounded-sm focus:outline-none focus:ring-2 focus:ring-red-500"
             />
@@ -64,8 +64,8 @@ const Signup = () => {
             </label>
             <input
               type="password"
-            //   value={formData.password}
-            //   onChange={handleChange}
+              value={formData.password}
+              onChange={handleChange}
               placeholder="Enter Your Password"
               className="w-full px-6 py-1 rounded-sm focus:outline-none focus:ring-2 focus:ring-red-500"
             />
