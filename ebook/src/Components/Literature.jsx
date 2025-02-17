@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React  from 'react';
 import Modal from 'react-modal';
 
 //image 
@@ -12,6 +12,7 @@ import tennaliImg from './litImg/tennali.jpg'
 import murudanyagamPdf from './Assetes/literaturePdf/murudanyagam.pdf';
 import PonniyinSelvanPdf from './Assetes/literaturePdf/PonniyinSelvan.pdf';
 import TennaliRamanPdf from './Assetes/literaturePdf/tenaliraman.pdf';
+import { Link } from 'react-router-dom';
 
 
 
@@ -19,9 +20,9 @@ import TennaliRamanPdf from './Assetes/literaturePdf/tenaliraman.pdf';
 Modal.setAppElement('#root');
 
 const Literature = () => {
-  const [selectedBook, setSelectedBook] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
-  const iframeRef = useRef(null);
+  // const [selectedBook, setSelectedBook] = useState(null);
+  // const [isOpen, setIsOpen] = useState(false);
+  // const iframeRef = useRef(null);
 
   const books = [
     { image:murudanyagamImg,
@@ -40,29 +41,29 @@ const Literature = () => {
          path: TennaliRamanPdf },
 
   ];
-  const openModal = (path) => {
-    setSelectedBook(path);
-    setIsOpen(true);
-  };
+  // const openModal = (path) => {
+  //   setSelectedBook(path);
+  //   setIsOpen(true);
+  // };
 
-  const closeModal = () => {
-    setIsOpen(false);
-    setSelectedBook(null);
-  };
+  // const closeModal = () => {
+  //   setIsOpen(false);
+  //   setSelectedBook(null);
+  // };
 
-  const toggleFullScreen = () => {
-    if (iframeRef.current) {
-      if (iframeRef.current.requestFullscreen) {
-        iframeRef.current.requestFullscreen();
-      } else if (iframeRef.current.mozRequestFullScreen) {
-        iframeRef.current.mozRequestFullScreen();
-      } else if (iframeRef.current.webkitRequestFullscreen) {
-        iframeRef.current.webkitRequestFullscreen();
-      } else if (iframeRef.current.msRequestFullscreen) {
-        iframeRef.current.msRequestFullscreen();
-      }
-    }
-  };
+  // const toggleFullScreen = () => {
+  //   if (iframeRef.current) {
+  //     if (iframeRef.current.requestFullscreen) {
+  //       iframeRef.current.requestFullscreen();
+  //     } else if (iframeRef.current.mozRequestFullScreen) {
+  //       iframeRef.current.mozRequestFullScreen();
+  //     } else if (iframeRef.current.webkitRequestFullscreen) {
+  //       iframeRef.current.webkitRequestFullscreen();
+  //     } else if (iframeRef.current.msRequestFullscreen) {
+  //       iframeRef.current.msRequestFullscreen();
+  //     }
+  //   }
+  // };
 
   return (
     <div>
@@ -74,20 +75,21 @@ const Literature = () => {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 p-5">
         {books.map((book, index) => (
-          <div key={index} className="text-center p-3 bg-gray-50 rounded-md shadow-lg hover:shadow-xl transition-shadow">
+          <div key={index} className="text-center p-3 bg-gray-50 rounded-md shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-200">
             <img src={book.image} alt={book.alt} className="w-full h-72 object-cover rounded-xl" />
             <h1 className="text-black font-bold mt-3 text-sm sm:text-base">{book.name}</h1>
-            <button
-              onClick={() => openModal(book.path)}
-              className="mt-3 px-4 py-2 bg-[#66FCF1] text-[#1F2833] rounded-sm font-bold hover:bg-[#45E0D3]"
-            >
-              Read Book
-            </button>
+        <Link to='/show'
+        state={{book:book,}}>    <button
+             
+        className="mt-3 px-4 py-2 bg-[#66FCF1] text-[#1F2833] rounded-sm font-bold hover:bg-[#45E0D3]"
+      >
+        Read Book
+      </button></Link>
           </div>
         ))}
       </div>
 
-      <Modal isOpen={isOpen} onRequestClose={closeModal} className="fixed inset-0 flex items-center justify-center p-4">
+      {/* <Modal isOpen={isOpen} onRequestClose={closeModal} className="fixed inset-0 flex items-center justify-center p-4">
         <div className="bg-white w-full max-w-4xl p-5 rounded-lg shadow-xl relative">
           <button onClick={closeModal} className="absolute top-2 right-2 text-black text-2xl">&times;</button>
           <h2 className="text-xl font-bold mb-3">Reading: {selectedBook}</h2>
@@ -104,7 +106,7 @@ const Literature = () => {
             Fullscreen
           </button>
         </div>
-      </Modal>
+      </Modal> */}
     </div>
   );
 };

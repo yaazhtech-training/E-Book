@@ -14,8 +14,10 @@ import Categories from './Components/Categories';
 import Childrens from './Components/Childrens';
 import PdfViewer from './Components/PdfViewer';
 import Literature from './Components/Literature';
-import SelfImprovement from './Components/SelfImprove';
 import SelfImprove from './Components/SelfImprove';
+import ShowPdf from './Components/ShowPdf';
+import Education from './Components/educationFolder/Education';
+import History from './Components/HistoryFolder/History';
 
 function App() {
   return (
@@ -39,6 +41,11 @@ function App() {
         <Route path='/Childrens'element={<Childrens/>}/>
         <Route path='/literature'element={<Literature/>}/>
         <Route path='/self'element={<SelfImprove/>}/>
+        <Route path='/edu'element={<Education/>}/>
+        <Route path='/history'element={<History/>}/>
+        <Route path='/show'element={<ShowPdf/>}/>
+       
+
 
 
        </Routes>

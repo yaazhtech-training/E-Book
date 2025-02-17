@@ -3,36 +3,37 @@
 import React, { useState } from 'react';
 
 //bg image
-import bgimage from "../Components/Selfimg/bgimage.webp";
+ import bgimage from './img/bgimage.webp'
 
-///books overView image 
-import atomic from './Selfimg/atomic.jpg'
-import money from './Selfimg/money.webp'
-import mindset from './Selfimg/mindset.jpg'
-import greatgood from './Selfimg/greatgood.jpg'
+// ///books overView image 
+import muhal from './img/muhalImg.jpg'
+// import money from './Selfimg/money.webp'
+// import mindset from './Selfimg/mindset.jpg'
+// import greatgood from './Selfimg/greatgood.jpg'
 
-//importing a pdf 
-import atomicPdf from './SelfimpPDF/atomic.pdf'
-import moneyPdf from './SelfimpPDF/money.pdf'
-import mindsetPdf from './SelfimpPDF/mindset.pdf'
-import greatGoodPdf from './SelfimpPDF/greatGood.pdf'
+// //importing a pdf 
+ import muhalPdf from './pdf/Muhal.pdf'
+// import moneyPdf from './SelfimpPDF/money.pdf'
+// import mindsetPdf from './SelfimpPDF/mindset.pdf'
+// import greatGoodPdf from './SelfimpPDF/greatGood.pdf'
 import { Link } from 'react-router-dom';
 
-const SelfImprove = () => {
+const History = () => {
   const [selectedBook, setSelectedBook] = useState(null);
 
   const books = [
-    { image: atomic, alt: 'Atomic Habits', name: 'Atomic Habits', path: atomicPdf },
-    { image: money, alt: 'Psychology Of Money', name: 'Psychology Of Money', path: moneyPdf },
-    { image: mindset, alt: 'Mind Set', name: 'Mind Set', path: mindsetPdf },
-    { image: greatgood, alt: 'Great To Good', name: 'Great To Good', path: greatGoodPdf },
+     { image: muhal, alt: 'Mughal Empire', name: 'Mughal Empire', path: muhalPdf },
+    // { image: money, alt: 'Psychology Of Money', name: 'Psychology Of Money', path: moneyPdf },
+    // { image: mindset, alt: 'Mind Set', name: 'Mind Set', path: mindsetPdf },
+    // { image: greatgood, alt: 'Great To Good', name: 'Great To Good', path: greatGoodPdf },
   ];
 
   return (
     <div className="w-full h-screen flex flex-col">
       {/* Background Image Section */}
       {!selectedBook && (
-        <div style={{ backgroundImage: `url(${bgimage})` }} className="bg-cover bg-top w-full h-[50vh]">
+        
+         <div style={{ backgroundImage: `url(${bgimage})` }} className="bg-cover bg-bottom w-full h-[50vh]">
           <div className="bg-black bg-opacity-50 h-full flex justify-center items-center">
             <h1 className="sm:text-5xl md:text-5xl font-bold text-white">SELF-IMPROVEMENT BOOKS</h1>
           </div>
@@ -68,25 +69,8 @@ const SelfImprove = () => {
           ))}
         </div>
       )}
-
-      {/* Fullscreen PDF Viewer
-      {selectedBook && (
-        <div className="fixed inset-0 bg-white flex flex-col items-center justify-center">
-          <button
-            onClick={() => setSelectedBook(null)}
-            className="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-600"
-          >
-            Close
-          </button>
-          <embed
-            src={`${selectedBook}#toolbar=0&navpanes=0&scrollbar=1`}
-            type="application/pdf"
-            className="w-full h-full"
-          />
-        </div>
-      )} */}
     </div>
   );
 };
 
-export default  SelfImprove;
+export default  History;

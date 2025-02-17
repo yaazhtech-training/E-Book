@@ -38,7 +38,13 @@ const Categories = () => {
       image: educatImage,
       alt: "Education",
       name: "Education",
-      navigate: "/Education",
+      navigate: "/edu",
+    },
+    {
+      image: historyImage,
+      alt: "History",
+      name: "History",
+      navigate: "/History",
     },
     {
       image: scienceImage,
@@ -52,12 +58,7 @@ const Categories = () => {
       name: "Biography",
       navigate: "/Biography",
     },
-    {
-      image: historyImage,
-      alt: "History",
-      name: "History",
-      navigate: "/History",
-    },
+ 
     {
       image: fantasyImage,
       alt: "Fantasy",
