@@ -12,6 +12,7 @@ import mysteryImage from "../books/Categoryimg/mystery.png";
 import selfImg from "./Selfimg/self.jpg";
 import scienceImage from "../books/Categoryimg/science.webp";
 import biographyImage from "../books/Categoryimg/biography.jpg";
+import namTamilarImage from "../books/Categoryimg/naam-tamilar-katchi.png";
 
 const Categories = () => {
   const categories = [
@@ -34,12 +35,12 @@ const Categories = () => {
       name: "Self-Imporvement",
       navigate: "/self",
     },
-    {
-      image: educatImage,
-      alt: "Education",
-      name: "Education",
-      navigate: "/edu",
-    },
+    // {
+    //   image: educatImage,
+    //   alt: "Education",
+    //   name: "Education",
+    //   navigate: "/edu",
+    // },
     {
       image: historyImage,
       alt: "History",
@@ -47,49 +48,55 @@ const Categories = () => {
       navigate: "/History",
     },
     {
-      image: scienceImage,
-      alt: "Science",
-      name: "Science",
-      navigate: "/Science",
+      image: namTamilarImage,
+      alt: "நாம் தமிழர் கட்சி ",
+      name: "நாம் தமிழர் கட்சி ",
+      navigate: "/ntk ",
     },
-    {
-      image: biographyImage,
-      alt: "Biography",
-      name: "Biography",
-      navigate: "/Biography",
-    },
+    // {
+    //   image: scienceImage,
+    //   alt: "Science",
+    //   name: "Science",
+    //   navigate: "/Science",
+    // },
+    // {
+    //   image: biographyImage,
+    //   alt: "Biography",
+    //   name: "Biography",
+    //   navigate: "/Biography",
+    // },
  
-    {
-      image: fantasyImage,
-      alt: "Fantasy",
-      name: "Fantasy",
-      navigate: "/Fantasy",
-    },
-    {
-      image: horrorImage,
-      alt: "Horror",
-      name: "Horror",
-      navigate: "/Horror",
-    },
-    {
-      image: mysteryImage,
-      alt: "Mystery",
-      name: "Mystery",
-      navigate: "/Mystery",
-    },
+    // {
+    //   image: fantasyImage,
+    //   alt: "Fantasy",
+    //   name: "Fantasy",
+    //   navigate: "/Fantasy",
+    // },
+    // {
+    //   image: horrorImage,
+    //   alt: "Horror",
+    //   name: "Horror",
+    //   navigate: "/Horror",
+    // },
+    // {
+    //   image: mysteryImage,
+    //   alt: "Mystery",
+    //   name: "Mystery",
+    //   navigate: "/Mystery",
+    // },
    
-    {
-      image: adventureImage,
-      alt: "Adventure",
-      name: "Adventure",
-      navigate: "/Adventure",
-    },
-    {
-      image: sportsImage,
-      alt: "Sports",
-      name: "Sports",
-      navigate: "/Sports",
-    },
+    // {
+    //   image: adventureImage,
+    //   alt: "Adventure",
+    //   name: "Adventure",
+    //   navigate: "/Adventure",
+    // },
+    // {
+    //   image: sportsImage,
+    //   alt: "Sports",
+    //   name: "Sports",
+    //   navigate: "/Sports",
+    // },
   ];
 
   return (

@@ -18,6 +18,7 @@ import SelfImprove from './Components/SelfImprove';
 import ShowPdf from './Components/ShowPdf';
 import Education from './Components/educationFolder/Education';
 import History from './Components/HistoryFolder/History';
+import NaamTamilarKatchi from './Components/NaamTamilar/NaamTamilarKatchi';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path='/self'element={<SelfImprove/>}/>
         <Route path='/edu'element={<Education/>}/>
         <Route path='/history'element={<History/>}/>
+        <Route path='/ntk'element={<NaamTamilarKatchi/>}/>
         <Route path='/show'element={<ShowPdf/>}/>
        
 
