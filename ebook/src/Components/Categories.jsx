@@ -35,12 +35,12 @@ const Categories = () => {
       name: "Self-Imporvement",
       navigate: "/self",
     },
-    // {
-    //   image: educatImage,
-    //   alt: "Education",
-    //   name: "Education",
-    //   navigate: "/edu",
-    // },
+    {
+      image: educatImage,
+      alt: "Education",
+      name: "Education",
+      navigate: "/edu",
+    },
     {
       image: historyImage,
       alt: "History",

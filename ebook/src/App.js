@@ -16,9 +16,12 @@ import PdfViewer from './Components/PdfViewer';
 import Literature from './Components/Literature';
 import SelfImprove from './Components/SelfImprove';
 import ShowPdf from './Components/ShowPdf';
-import Education from './Components/educationFolder/Education';
 import History from './Components/HistoryFolder/History';
 import NaamTamilarKatchi from './Components/NaamTamilar/NaamTamilarKatchi';
+import Education from './Components/EducationFolder/Education';
+import TeamsAndBooks from './Components/EducationFolder/TeamAndStd';
+import BookData from './Components/EducationFolder/BookData';
+
 
 function App() {
   return (
@@ -42,11 +45,17 @@ function App() {
         <Route path='/Childrens'element={<Childrens/>}/>
         <Route path='/literature'element={<Literature/>}/>
         <Route path='/self'element={<SelfImprove/>}/>
-        <Route path='/edu'element={<Education/>}/>
+       
         <Route path='/history'element={<History/>}/>
         <Route path='/ntk'element={<NaamTamilarKatchi/>}/>
         <Route path='/show'element={<ShowPdf/>}/>
-       
+
+
+        {/* Education  */}
+
+        <Route path='/edu'element={<Education/>}/>
+        <Route path="/:board/:standard" element={<TeamsAndBooks />} />
+        <Route path='/show'element={<BookData/>}/>
 
 
 
