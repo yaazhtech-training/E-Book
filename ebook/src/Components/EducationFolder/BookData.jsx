@@ -9,8 +9,16 @@ import standard4img from './EduImg/standard4img.png'
 import standard5img from './EduImg/standard5img.avif'
 
 
+//state board pdf 
 
 import tamilstd1team1 from './EduPdf/std1team1tamil.pdf'
+import Engstd1team1 from './EduPdf/std1team1english.pdf'
+import Evsstd1team1 from './EduPdf/Evsstd1Team1.pdf'
+
+
+
+
+
 import t1St1pdf from './EduPdf/std1team1tamil.pdf'
 
 const BookData = () => {
@@ -18,9 +26,11 @@ const book =[
  // 📚 state Board Books
 //standard 1
  //std 1 team 1
-{ board: "state-board", standard: "1st-standard", team: "Team 1", image: standard1img, name: "1st Book Tamil & English", path:tamilstd1team1 },
-    { board: "state-board", standard: "1st-standard", team: "Team 1", image: standard1img, name: "Maths", path: t1St1pdf },
-    { board: "state-board", standard: "1st-standard", team: "Team 1", image: standard1img, name: "Science Book", path: t1St1pdf },
+{ board: "state-board", standard: "1st-standard", team: "Team 1", image: standard1img, name: "Tamil", path:tamilstd1team1 },
+    { board: "state-board", standard: "1st-standard", team: "Team 1", image: standard1img, name: "English ", path: Engstd1team1 },
+     { board: "state-board", standard: "1st-standard", team: "Team 1", image: standard1img, name: "Maths", path: Evsstd1team1 },
+    // { board: "state-board", standard: "1st-standard", team: "Team 1", image: standard1img, name: "EVS", path: EvsStd1team1 },
+
     //std 1 team 2
     { board: "state-board", standard: "1st-standard", team: "Team 2", image: standard1img, name: "Science Book", path: t1St1pdf },
     { board: "state-board", standard: "1st-standard", team: "Team 2", image: standard1img, name: "Science Book", path: t1St1pdf },
