@@ -19,6 +19,12 @@ import Evsstd1term1 from './EduPdf/stateBoardpdf/std1Team1/Evsstd1Team1.pdf'
 import std1term2tamil from './EduPdf/stateBoardpdf/std1Team2/std1team2tamil.pdf'
 import std1term2eng from './EduPdf/stateBoardpdf/std1Team2/std1team2english.pdf'
 import std1term2evs from './EduPdf/stateBoardpdf/std1Team2//std1team2evs.pdf'
+//term 3
+import std1term3tamil from './EduPdf/stateBoardpdf//Std1Team3/stdterm3tamil.pdf'
+import std1term3engilsh from './EduPdf/stateBoardpdf//Std1Team3/std1term3engilsh.pdf'
+import std1term3Evs from './EduPdf/stateBoardpdf//Std1Team3/std1term3Evs.pdf'
+
+
 
 
 
@@ -45,9 +51,9 @@ const book =[
     // { board: "state-board", standard: "1st-standard",term: "Term 2", image: standard1img, name: "EVS", path: std1term2evs },
 
     //std 1term 3
-    { board: "state-board", standard: "1st-standard",term: "Term 3", image: standard1img, name: "Science Book", path: t1St1pdf },
-    { board: "state-board", standard: "1st-standard",term: "Term 3", image: standard1img, name: "Science Book", path: t1St1pdf },
-    { board: "state-board", standard: "1st-standard",term: "Term 3", image: standard1img, name: "Science Book", path: t1St1pdf },
+    { board: "state-board", standard: "1st-standard",term: "Term 3", image: standard1img, name: "Tamil", path: std1term3tamil },
+    { board: "state-board", standard: "1st-standard",term: "Term 3", image: standard1img, name: "English ", path: std1term3engilsh  },
+    { board: "state-board", standard: "1st-standard",term: "Term 3", image: standard1img, name: "Environmental Science", path:std1term3Evs  },
     // { board: "state-board", standard: "1st-standard",term: "Term 3", image: standard1img, name: "maths", path: t1St1pdf },
 
 //standard 2
