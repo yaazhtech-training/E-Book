@@ -7,7 +7,7 @@ import BooksData from './BookData';
 
 const TeamsAndBooks = () => {
   const { board, standard } = useParams(); // Get board and standard from URL
-  const teams = ["Team 1", "Team 2", "Team 3"];
+  const terms = ["Term 1", "Term 2", "Term 3"];
   const [selectedTeam, setSelectedTeam] = useState(null);
   const books = BooksData();
 
@@ -16,14 +16,14 @@ const TeamsAndBooks = () => {
       {!selectedTeam ? (
         <>
           <h1 className="text-2xl font-bold mb-4">{board.toUpperCase()} - {standard} - Choose Team</h1>
-          <div className="grid grid-cols-3 gap-4">
-            {teams.map((team, index) => (
+          <div className=" mx-96 grid grid-rows-3 gap-4">
+            {terms.map((term, index) => (
               <button
                 key={index}
-                onClick={() => setSelectedTeam(team)}
-                className="p-4 bg-green-500 text-white rounded-md text-center hover:bg-green-700 transition duration-300"
+                onClick={() => setSelectedTeam(term)}
+                className="p-5 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-700 transition duration-300 shadow-lg"
               >
-                {team}
+                {term}
               </button>
             ))}
           </div>
@@ -44,7 +44,7 @@ const TeamsAndBooks = () => {
           {/* 🔹 FILTER BOOKS BY BOARD, STANDARD, AND TEAM */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 p-5">
             {books
-              .filter((book) => book.board === board && book.standard === standard && book.team === selectedTeam)
+              .filter((book) => book.board === board && book.standard === standard && book.term === selectedTeam)
               .map((book, index) => (
                 <div
                   key={index}
