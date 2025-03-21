@@ -1,19 +1,22 @@
 
+
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import bgimage from "./EduImg/stateBoardBG.png";
 import BooksData from './BookData';
 
-
 const TeamsAndBooks = () => {
   const { board, standard } = useParams(); // Get board and standard from URL
   const terms = ["Term 1", "Term 2", "Term 3"];
+
   const [selectedTeam, setSelectedTeam] = useState(null);
   const books = BooksData();
+  const isGeneralBook = parseInt(standard) >= 8 && parseInt(standard) <= 12;
+
 
   return (
     <div className="p-6">
-      {!selectedTeam ? (
+      {!selectedTeam && !isGeneralBook ? (
         <>
           <h1 className="text-2xl font-bold mb-4">{board.toUpperCase()} - {standard} - Choose Team</h1>
           <div className=" mx-96 grid grid-rows-3 gap-4">
@@ -36,7 +39,7 @@ const TeamsAndBooks = () => {
           >
             <div className="bg-black bg-opacity-50 h-full flex justify-center items-center">
               <h1 className="sm:text-5xl md:text-5xl font-bold text-white">
-                {standard} - {selectedTeam} - Books
+                {standard} - {isGeneralBook ? "General Books" : selectedTeam + " - Books"}
               </h1>
             </div>
           </div>
@@ -44,7 +47,11 @@ const TeamsAndBooks = () => {
           {/* 🔹 FILTER BOOKS BY BOARD, STANDARD, AND TEAM */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 p-5">
             {books
-              .filter((book) => book.board === board && book.standard === standard && book.term === selectedTeam)
+              .filter((book) => 
+                book.board === board &&
+                book.standard === standard &&
+                (isGeneralBook || book.term === selectedTeam)
+              )
               .map((book, index) => (
                 <div
                   key={index}
@@ -66,4 +73,7 @@ const TeamsAndBooks = () => {
   );
 };
 
-export default TeamsAndBooks
+export default TeamsAndBooks;
+
+
+

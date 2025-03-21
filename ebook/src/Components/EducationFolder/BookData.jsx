@@ -108,7 +108,27 @@ const book =[
     { board: "state-board", standard: "5th-standard",term: "Term 3", image: standard4img, name: "Maths", path: "1al12YyeHK45pgTBkOXBQpV3sPRtXOP2Z" },
     { board: "state-board", standard: "5th-standard",term: "Term 3", image: standard4img, name: "Science", path: "1JBTPRWa0vyLVrMWWu7i0y5UzVXtdA8N9" },
     { board: "state-board", standard: "5th-standard",term: "Term 3", image: standard4img, name: "Social Studies", path: "1_ezn7Mu3R8S_HOsWE7Bn92CduEzBSeka" },
-//standard 6 
+
+//standard 6
+//Term 1
+    { board: "state-board", standard: "6th-standard",term: "Term 1", image: standard4img, name: "Tamil", path: "1AGV90PuQ6boCtzuSPAO6ppUzavaWesNw" },
+    { board: "state-board", standard: "6th-standard",term: "Term 1", image: standard4img, name: "English", path: "1Ox-Xp365dk9tcWdfXvK5rjF95yfMpjLM" },
+    { board: "state-board", standard: "6th-standard",term: "Term 1", image: standard4img, name: "Maths", path: "1tfrVpG2kvILe94zM66NlUWX8yZ7buNbb" },
+    { board: "state-board", standard: "6th-standard",term: "Term 1", image: standard4img, name: "Science", path: "1cmlg-hoHy_N21KiAVN8IrpIUCqCgJO0l" },
+    { board: "state-board", standard: "6th-standard",term: "Term 1", image: standard4img, name: "Social Studies", path: "1f4Y9DGdqlr4VY8D7URIQOwVFndI-B5T9" },
+    //Term 2
+    { board: "state-board", standard: "6th-standard",term: "Term 2", image: standard4img, name: "Tamil", path: "19K9QqbhuD2tlmnOX_bYLkjUiRgc_gBiP" },
+    { board: "state-board", standard: "6th-standard",term: "Term 2", image: standard4img, name: "English", path: "1qBKTHoLITK-L2bjTsvdl6AbT4TKJPprV" },
+    { board: "state-board", standard: "6th-standard",term: "Term 2", image: standard4img, name: "Maths", path: "1CuiXitbpvIJTIT7IjMVooV2Y8B8aEBIS" },
+    { board: "state-board", standard: "6th-standard",term: "Term 2", image: standard4img, name: "Science", path: "1eN7nxMtYtTNRKGX7CWXMcdUe1s9xZ3X1" },
+    { board: "state-board", standard: "6th-standard",term: "Term 2", image: standard4img, name: "Social Studies", path: "1dfciplINKKld6nSu_25eEe6581Ra6ncC" },  
+    //Term 3
+    { board: "state-board", standard: "6th-standard",term: "Term 3", image: standard4img, name: "Tamil", path: "1McoTjFs-o8pu4sEJpNpnIaIKNE9mKQuF" },
+    { board: "state-board", standard: "6th-standard",term: "Term 3", image: standard4img, name: "English", path: "1VRk9HgpGby8G0aTHT6OrpSPBnAkDMAtd" },
+    { board: "state-board", standard: "6th-standard",term: "Term 3", image: standard4img, name: "Maths", path: "1_qkMm4_gae59pRFS_VgyLBjE1zN3Bv6b" },
+    { board: "state-board", standard: "6th-standard",term: "Term 3", image: standard4img, name: "Science", path: "17vS80UocxiFT8uuN7FZfv2FgwpNkXSo0" },
+    { board: "state-board", standard: "6th-standard",term: "Term 3", image: standard4img, name: "Social Studies", path: "1mdXudbHXcj8Ra9blhoLs1sb5FVPQnNtJ" },
+//standard 7
     //Term 1
     { board: "state-board", standard: "7th-standard",term: "Term 1", image: standard4img, name: "Tamil", path: "1pkskJu1OIhu1lkXdOVt2tWUBNFcX5hvh" },
     { board: "state-board", standard: "7th-standard",term: "Term 1", image: standard4img, name: "English", path: "1pkskJu1OIhu1lkXdOVt2tWUBNFcX5hvh" },
@@ -127,26 +147,47 @@ const book =[
     { board: "state-board", standard: "7th-standard",term: "Term 3", image: standard4img, name: "Maths", path: "1BFwgnl-xwYvyGBr5hS41cZm5u3ksd-Hl" },
     { board: "state-board", standard: "7th-standard",term: "Term 3", image: standard4img, name: "Science", path: "165fWgvUp8VKD2PVaM1_PbcWszbCYLEXj" },
     { board: "state-board", standard: "7th-standard",term: "Term 3", image: standard4img, name: "Social Studies", path: "1sv-GfenQKjbE9rSF6BJcRLV1Bzh-RPbQ" },
-//standard 7 
-    //Term 1
-    { board: "state-board", standard: "6th-standard",term: "Term 1", image: standard4img, name: "Tamil", path: "1AGV90PuQ6boCtzuSPAO6ppUzavaWesNw" },
-    { board: "state-board", standard: "6th-standard",term: "Term 1", image: standard4img, name: "English", path: "1Ox-Xp365dk9tcWdfXvK5rjF95yfMpjLM" },
-    { board: "state-board", standard: "6th-standard",term: "Term 1", image: standard4img, name: "Maths", path: "1tfrVpG2kvILe94zM66NlUWX8yZ7buNbb" },
-    { board: "state-board", standard: "6th-standard",term: "Term 1", image: standard4img, name: "Science", path: "1cmlg-hoHy_N21KiAVN8IrpIUCqCgJO0l" },
-    { board: "state-board", standard: "6th-standard",term: "Term 1", image: standard4img, name: "Social Studies", path: "1f4Y9DGdqlr4VY8D7URIQOwVFndI-B5T9" },
-    //Term 2
-    { board: "state-board", standard: "6th-standard",term: "Term 2", image: standard4img, name: "Tamil", path: "19K9QqbhuD2tlmnOX_bYLkjUiRgc_gBiP" },
-    { board: "state-board", standard: "6th-standard",term: "Term 2", image: standard4img, name: "English", path: "1qBKTHoLITK-L2bjTsvdl6AbT4TKJPprV" },
-    { board: "state-board", standard: "6th-standard",term: "Term 2", image: standard4img, name: "Maths", path: "1CuiXitbpvIJTIT7IjMVooV2Y8B8aEBIS" },
-    { board: "state-board", standard: "6th-standard",term: "Term 2", image: standard4img, name: "Science", path: "1eN7nxMtYtTNRKGX7CWXMcdUe1s9xZ3X1" },
-    { board: "state-board", standard: "6th-standard",term: "Term 2", image: standard4img, name: "Social Studies", path: "1dfciplINKKld6nSu_25eEe6581Ra6ncC" },  
-    //Term 3
-    { board: "state-board", standard: "6th-standard",term: "Term 3", image: standard4img, name: "Tamil", path: "1McoTjFs-o8pu4sEJpNpnIaIKNE9mKQuF" },
-    { board: "state-board", standard: "6th-standard",term: "Term 3", image: standard4img, name: "English", path: "1VRk9HgpGby8G0aTHT6OrpSPBnAkDMAtd" },
-    { board: "state-board", standard: "6th-standard",term: "Term 3", image: standard4img, name: "Maths", path: "1_qkMm4_gae59pRFS_VgyLBjE1zN3Bv6b" },
-    { board: "state-board", standard: "6th-standard",term: "Term 3", image: standard4img, name: "Science", path: "17vS80UocxiFT8uuN7FZfv2FgwpNkXSo0" },
-    { board: "state-board", standard: "6th-standard",term: "Term 3", image: standard4img, name: "Social Studies", path: "1mdXudbHXcj8Ra9blhoLs1sb5FVPQnNtJ" },
+    
+//standard 8
+    //Genernal 
+    { board: "state-board", standard: "8th-standard",term: "Term 1", image: standard4img, name: "Tamil", path: "1EcuCj97up5gafBgjx1gFQkqPBFCJ6_G5" },
+    { board: "state-board", standard: "8th-standard",term: "Term 1", image: standard4img, name: "English", path: "1Uxz0krOL5gnIxZiE3Ga7Y7j9cOo6cQlm" },
+    { board: "state-board", standard: "8th-standard",term: "Term 1", image: standard4img, name: "Maths", path: "1kVdXFg1aLDnmoVP5m_hBsp_O0AnKuI1g" },
+    { board: "state-board", standard: "8th-standard",term: "Term 1", image: standard4img, name: "Science", path: "1WbRhk887PVbAbfs5LydwFjv8HDCd8Me_" },
+    { board: "state-board", standard: "8th-standard",term: "Term 1", image: standard4img, name: "Social Studies", path: "18J5X7ToB97W-iPSaOf4don_a054bbtX6" },
 
+
+//standard 9
+    //Genernal 
+    { board: "state-board", standard: "9th-standard",term: "Term 1", image: standard4img, name: "Tamil", path: "1Ie9nCxqTTykTerbHJi9Hdy3qaoTOIFYO" },
+    { board: "state-board", standard: "9th-standard",term: "Term 1", image: standard4img, name: "English", path: "1Nb3I6zvCDh2Oa3PZpydcI3-c56s9jTLt" },
+    { board: "state-board", standard: "9th-standard",term: "Term 1", image: standard4img, name: "Maths", path: "1zQT9vmbIjFBGdNaZ8krqRalrpNqlI9FZ" },
+    { board: "state-board", standard: "9th-standard",term: "Term 1", image: standard4img, name: "Science", path: "1-LFNIGOHSCMxlobWlWaWcu0mdrSx2h2z" },
+    { board: "state-board", standard: "9th-standard",term: "Term 1", image: standard4img, name: "Social Studies", path: "1oPDQkwAn0GTaUa9JR_vGZKXBWGpSdG1g" },
+
+    
+//standard 10
+    //Genernal 
+    { board: "state-board", standard: "10th-standard",term: "Term 1", image: standard4img, name: "Tamil", path: "1rfZgaWCVkiYcmsbQkD6obiceAE9Cc0WP" },
+    { board: "state-board", standard: "10th-standard",term: "Term 1", image: standard4img, name: "English", path: "1upu6K18fiDNR3R0CqcAYzdCFy-Vz99DC" },
+    { board: "state-board", standard: "10th-standard",term: "Term 1", image: standard4img, name: "Maths", path: "1u4jQ2jXyAvcy4ObdlRPRDh6Eq8gUqHdM" },
+    { board: "state-board", standard: "10th-standard",term: "Term 1", image: standard4img, name: "Science", path: "1URdQgZ6I8twJ0MKz38OXLe8J05GxFO2W" },
+    { board: "state-board", standard: "10th-standard",term: "Term 1", image: standard4img, name: "Social Studies", path: "1PV7_u8ccXB5PkkqRCL1nGd7Fj0XBmEdC" },
+   
+   
+//standard 11
+    //language
+    { board: "state-board", standard: "11th-standard",term: "Term 1", image: standard4img, name: "Genernal-Tamil", path: "11Gb9dlfIBIMxkh2zzQbajaJjOd5jUXVD" },
+    { board: "state-board", standard: "11th-standard",term: "Term 1", image: standard4img, name: "Advance-tamil", path: "1uYjh8gLXb_3SNdaMy0yTxSsIJ9bR5Vzn" },
+    { board: "state-board", standard: "11th-standard",term: "Term 1", image: standard4img, name: "Gendernal-English", path: "1BnZ3SUbfuSXvd7aGpT0N-Vy3LjVnmX76" },
+    { board: "state-board", standard: "11th-standard",term: "Term 1", image: standard4img, name: "Communicate-English", path: "10zT2WGJkSloALv_e4lS42QiEsPEhxovh" },
+    { board: "state-board", standard: "11th-standard",term: "Term 1", image: standard4img, name: "Sanakirt", path: "1pOBEOz1kNjyl0pQwnjE_LewVpPhTy4X3" },
+    { board: "state-board", standard: "11th-standard",term: "Term 1", image: standard4img, name: "Hindi", path: "1cubnan-SanjipnBy7yZztcF67Oug5nOK" },
+    { board: "state-board", standard: "11th-standard",term: "Term 1", image: standard4img, name: "Arabic", path: "1p5swq5aDXH8RfBtscfEzRYR9VcNUIgP5" },
+    { board: "state-board", standard: "11th-standard",term: "Term 1", image: standard4img, name: "Germen", path: "1zYnHWmYs-x1FAuqV32bY5WowFVor1Dhg" },
+    { board: "state-board", standard: "11th-standard",term: "Term 1", image: standard4img, name: "French", path: "1RnhQxmT--SfMA245J_Ep6GrfwneiBWew" },
+   //genernal
+   
     // 📚 CBSE Board Books
 //standard 1
     //std 1Term
