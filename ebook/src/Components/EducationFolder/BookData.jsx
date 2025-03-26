@@ -276,69 +276,85 @@ const book =[
 //standard 1
     //std 1Term
     // { board: "cbse", standard: "1st-standard",term: "Term 1", ima ge: standard1img, name: "1st Book Tamil & English", path:tamilstd1term1 },
-    { board: "cbse", standard: "1st-standard",term: "Term 1", image: standard1img, name: "Maths", path: t1St1pdf },
-    { board: "cbse", standard: "1st-standard",term: "Term 1", image: standard1img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-1", path:"11gB9CrR1wZ-IYdBAES3rIaLhK4cwH6N8"},
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-2", path:"1XzoH0xDRCDbIJYxfKRc3PG24QetCdbOZ" },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-3", path: "1a13xBvImGMTamqhhw7bhcnlylhVHwlPy" },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-4", path:"1noIcFxH0eV8LXRPM597-tJ6Go54YBGzv"},
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-5", path:"1E3Oc2_JfDlrcWDbI7rNtTpfBYgVXMFjd" },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-6", path: "1qKp9VMtVYjqmOn0dNdYZW2OdOG5Whbt9" },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-7", path:"14so5SQdJ9vxlNKVJ8F79wkjt4nBthHu4"},
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-8", path:"1OnVMwH-B9iLXX_K5XPu6jl0pTAkU-R45" },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-9", path: "1uugCAMLczLmcX9ddAIgjUalF2C9DaBG_" },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-10", path:"19E8ul8ULpIwQosfwgWd5Bh7-6l14rfFM"},
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-11", path:"1B3nO9CVRMOvMStmF2vDc2N-cso2PR3JU" },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-12", path: "1slwkxZuK1NlSJcq7DWW47lPPytmzAQAD" },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Maths",term: "Term 1",chapter : "chapter-13", path: "1H7nSUXXTcz3EI924VTwvZVEvIxRqtW8i" },
+  
+
+    
+    
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Science Book", path: t1St1pdf },
     //std 1Term 2
-    { board: "cbse", standard: "1st-standard",term: "Term 2", image: standard1img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "1st-standard",term: "Term 2", image: standard1img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "1st-standard",term: "Term 2", image: standard1img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Science Book", path: t1St1pdf },
     //std 1Term 3
-    { board: "cbse", standard: "1st-standard",term: "Term 3", image: standard1img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "1st-standard",term: "Term 3", image: standard1img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "1st-standard",term: "Term 3", image: standard1img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "1st-standard", image: standard1img, name: "Science Book", path: t1St1pdf },
 //standard 2
     //Term
-    { board: "cbse", standard: "2nd-standard",term: "Term 1", image: standard2img, name: "Math Book", path: t1St1pdf },
-    { board: "cbse", standard: "2nd-standard",term: "Term 1", image: standard2img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "2nd-standard",term: "Term 1", image: standard2img, name: "Social Studies", path: t1St1pdf },
+    { board: "cbse", standard: "2nd-standard", image: standard2img, name: "Math Book", path: t1St1pdf },
+    { board: "cbse", standard: "2nd-standard", image: standard2img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "2nd-standard", image: standard2img, name: "Social Studies", path: t1St1pdf },
     //Term 2
-    { board: "cbse", standard: "2nd-standard",term: "Term 2", image: standard2img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "2nd-standard",term: "Term 2", image: standard2img, name: "Social Studies", path: t1St1pdf },
-    { board: "cbse", standard: "2nd-standard",term: "Term 2", image: standard2img, name: "Social Studies", path: t1St1pdf },
+    { board: "cbse", standard: "2nd-standard", image: standard2img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "2nd-standard", image: standard2img, name: "Social Studies", path: t1St1pdf },
+    { board: "cbse", standard: "2nd-standard", image: standard2img, name: "Social Studies", path: t1St1pdf },
     //Term 3
-    { board: "cbse", standard: "2nd-standard",term: "Term 3", image: standard2img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "2nd-standard",term: "Term 3", image: standard2img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "2nd-standard",term: "Term 3", image: standard2img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "2nd-standard", image: standard2img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "2nd-standard", image: standard2img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "2nd-standard", image: standard2img, name: "Science Book", path: t1St1pdf },
 
 //standard 3 
     //Term
-    { board: "cbse", standard: "3rd-standard",term: "Term 1", image:standard3img, name: "Math Book", path: t1St1pdf },
-    { board: "cbse", standard: "3rd-standard",term: "Term 1", image:standard3img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "3rd-standard",term: "Term 1", image:standard3img, name: "Social Studies", path: t1St1pdf },
+    { board: "cbse", standard: "3rd-standard", image:standard3img, name: "Math Book", path: t1St1pdf },
+    { board: "cbse", standard: "3rd-standard", image:standard3img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "3rd-standard", image:standard3img, name: "Social Studies", path: t1St1pdf },
     //Term 2
-    { board: "cbse", standard: "3rd-standard",term: "Term 2", image:standard3img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "3rd-standard",term: "Term 2", image:standard3img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "3rd-standard",term: "Term 2", image:standard3img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "3rd-standard", image:standard3img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "3rd-standard", image:standard3img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "3rd-standard", image:standard3img, name: "Science Book", path: t1St1pdf },
     //Term 3
-    { board: "cbse", standard: "3rd-standard",term: "Term 3", image:standard3img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "3rd-standard",term: "Term 3", image:standard3img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "3rd-standard",term: "Term 3", image:standard3img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "3rd-standard", image:standard3img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "3rd-standard", image:standard3img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "3rd-standard", image:standard3img, name: "Science Book", path: t1St1pdf },
     //standard 4
     //Term
-    { board: "cbse", standard: "4th-standard",term: "Term 1", image: standard4img, name: "Math Book", path: t1St1pdf },
-    { board: "cbse", standard: "4th-standard",term: "Term 1", image: standard4img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "4th-standard",term: "Term 1", image: standard4img, name: "Social Studies", path: t1St1pdf },
+    { board: "cbse", standard: "4th-standard", image: standard4img, name: "Math Book", path: t1St1pdf },
+    { board: "cbse", standard: "4th-standard", image: standard4img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "4th-standard", image: standard4img, name: "Social Studies", path: t1St1pdf },
     //Term 2
-    { board: "cbse", standard: "4th-standard",term: "Term 2", image: standard4img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "4th-standard",term: "Term 2", image: standard4img, name: "Social Studies", path: t1St1pdf },
-    { board: "cbse", standard: "4th-standard",term: "Term 2", image: standard4img, name: "Social Studies", path: t1St1pdf },
+    { board: "cbse", standard: "4th-standard", image: standard4img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "4th-standard", image: standard4img, name: "Social Studies", path: t1St1pdf },
+    { board: "cbse", standard: "4th-standard", image: standard4img, name: "Social Studies", path: t1St1pdf },
 
     //Term 3
-    { board: "cbse", standard: "4th-standard",term: "Term 3", image: standard4img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "4th-standard",term: "Term 3", image: standard4img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "4th-standard",term: "Term 3", image: standard4img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "4th-standard", image: standard4img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "4th-standard", image: standard4img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "4th-standard", image: standard4img, name: "Science Book", path: t1St1pdf },
     //standard 5
     //Term
-    { board: "cbse", standard: "5th-standard",term: "Term 1", image: standard5img, name: "Math Book", path: t1St1pdf },
-    { board: "cbse", standard: "5th-standard",term: "Term 1", image: standard5img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "5th-standard",term: "Term 1", image: standard5img, name: "Social Studies", path: t1St1pdf },
+    { board: "cbse", standard: "5th-standard", image: standard5img, name: "Math Book", path: t1St1pdf },
+    { board: "cbse", standard: "5th-standard", image: standard5img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "5th-standard", image: standard5img, name: "Social Studies", path: t1St1pdf },
     //Term 2
-    { board: "cbse", standard: "5th-standard",term: "Term 2", image: standard5img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "5th-standard",term: "Term 2", image: standard5img, name: "Social Studies", path: t1St1pdf },
+    { board: "cbse", standard: "5th-standard", image: standard5img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "5th-standard", image: standard5img, name: "Social Studies", path: t1St1pdf },
     //Term 3
-    { board: "cbse", standard: "5th-standard",term: "Term 3", image: standard5img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "5th-standard",term: "Term 3", image: standard5img, name: "Science Book", path: t1St1pdf },
-    { board: "cbse", standard: "5th-standard",term: "Term 3", image: standard5img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "5th-standard", image: standard5img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "5th-standard", image: standard5img, name: "Science Book", path: t1St1pdf },
+    { board: "cbse", standard: "5th-standard", image: standard5img, name: "Science Book", path: t1St1pdf },
   ];
 
   return book

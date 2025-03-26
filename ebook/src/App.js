@@ -28,9 +28,9 @@ function App() {
     <div className="App">
       
       <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
-       <main className="flex-grow">
+      
       <Navbar/>
+
        <Routes>
        
         <Route path='/About'element={<About/>}/>
@@ -62,9 +62,7 @@ function App() {
 
        
        </Routes>
-       </main>
       <Footer/> 
-      </div>
       </BrowserRouter>
 
       

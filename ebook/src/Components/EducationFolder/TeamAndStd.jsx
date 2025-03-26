@@ -4,25 +4,33 @@ import bgimage from "./EduImg/stateBoardBG.png";
 import BooksData from './BookData';
 
 const TeamsAndBooks = () => {
-  const { board, standard } = useParams(); // Get board and standard from URL
-  const terms = ["Term 1", "Term 2", "Term 3"];
+  const { board, standard } = useParams();
+  const terms = ["Term 1", "Term 2", "Term 3"]; // Keep term selection for state board
 
-  const [selectedTeam, setSelectedTeam] = useState(null);
+  const [selectedTerm, setSelectedTerm] = useState(null);
   const books = BooksData();
-  const isGeneralBook = parseInt(standard) >= 8 && parseInt(standard) <= 12;
 
+  const isCBSE = board.toLowerCase() === "cbse";
+  const isStateBoard = board.toLowerCase() === "state-board";
+  const stdNumber = parseInt(standard);
+  
+  //  CBSE Always chapter-wise (No term)
+  const isGeneralBook = isCBSE && stdNumber >= 1 && stdNumber <= 12;
+
+  //  State Board (8-12) should NOT use terms
+  const isStateWithoutTerm = isStateBoard && stdNumber >= 8 && stdNumber <= 12;
 
   return (
-  
-      <div className="p-6  w-full h-full">
-      {!selectedTeam && !isGeneralBook ? (
+    <div className="p-6 w-full h-full">
+      {/* 🔹 Show Term selection ONLY for State Board (Below 8th Standard) */}
+      {!selectedTerm && isStateBoard && !isStateWithoutTerm ? (
         <>
-          <h1 className="text-2xl font-bold mb-4">{board.toUpperCase()} - {standard} - Choose Team</h1>
-          <div className=" mx-96 grid grid-rows-3 gap-4">
+          <h1 className="text-2xl font-bold mb-4">{board.toUpperCase()} - {standard} - Choose Term</h1>
+          <div className="mx-96 grid grid-rows-3 gap-4">
             {terms.map((term, index) => (
               <button
                 key={index}
-                onClick={() => setSelectedTeam(term)}
+                onClick={() => setSelectedTerm(term)}
                 className="p-5 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-700 transition duration-300 shadow-lg"
               >
                 {term}
@@ -38,18 +46,18 @@ const TeamsAndBooks = () => {
           >
             <div className="bg-black bg-opacity-50 h-full flex justify-center items-center">
               <h1 className="sm:text-5xl md:text-5xl font-bold text-white">
-                {standard} - {isGeneralBook ? "General Books" : selectedTeam + " - Books"}
+                {standard} - {isGeneralBook ? "General Books" : isStateBoard && !isStateWithoutTerm ? selectedTerm + " - Subjects" : "Subjects"}
               </h1>
             </div>
           </div>
 
-          {/* 🔹 FILTER BOOKS BY BOARD, STANDARD, AND TEAM */}
+          {/* 🔹 Display Books (CBSE: Chapters, State Board: Subjects) */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 p-5">
             {books
               .filter((book) => 
                 book.board === board &&
                 book.standard === standard &&
-                (isGeneralBook || book.term === selectedTeam)
+                (!isStateBoard || isStateWithoutTerm || book.term === selectedTerm) // State Board (8-12) ignores term
               )
               .map((book, index) => (
                 <div
@@ -57,10 +65,12 @@ const TeamsAndBooks = () => {
                   className="text-center p-3 bg-gray-50 rounded-md shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-200"
                 >
                   <img src={book.image} alt={book.name} className="w-full h-72 object-cover rounded-xl" />
-                  <h1 className="text-black font-bold mt-3 text-sm sm:text-base">{book.name}</h1>
+                  <h1 className="text-black font-bold mt-3 text-sm sm:text-base">
+                    {book.name} {isCBSE ? `- ${book.chapter}` : ""}
+                  </h1>
                   <Link to="/show" state={{ book }}>
                     <button className="mt-3 px-5 py-2 bg-[#66FCF1] text-[#1F2833] rounded-lg font-bold hover:bg-[#45E0D3] transition duration-300 shadow-md">
-                      Read Book
+                      Read {isCBSE ? "Chapter" : "Book"}
                     </button>
                   </Link>
                 </div>
@@ -69,11 +79,7 @@ const TeamsAndBooks = () => {
         </div>
       )}
     </div>
-    
   );
 };
 
 export default TeamsAndBooks;
-
-
-
