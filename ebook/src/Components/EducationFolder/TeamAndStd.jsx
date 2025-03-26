@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import bgimage from "./EduImg/stateBoardBG.png";
@@ -15,7 +13,8 @@ const TeamsAndBooks = () => {
 
 
   return (
-    <div className="p-6">
+  
+      <div className="p-6  w-full h-full">
       {!selectedTeam && !isGeneralBook ? (
         <>
           <h1 className="text-2xl font-bold mb-4">{board.toUpperCase()} - {standard} - Choose Team</h1>
@@ -70,6 +69,7 @@ const TeamsAndBooks = () => {
         </div>
       )}
     </div>
+    
   );
 };
 

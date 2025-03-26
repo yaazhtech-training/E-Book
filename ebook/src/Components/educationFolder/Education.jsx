@@ -8,7 +8,7 @@ const Education = () => {
   const [selectedBoard, setSelectedBoard] = useState("");
 
   const boards = [
-    { image: stateImg, name: "State Board", key: "state-board",navigate :'/' },
+    { image: stateImg, name: "State Board", key: "state-board"},
     { image: cbseImg, name: "CBSE", key: "cbse" },
   ];
 
