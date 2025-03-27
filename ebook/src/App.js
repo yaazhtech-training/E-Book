@@ -21,6 +21,7 @@ import NaamTamilarKatchi from './Components/NaamTamilar/NaamTamilarKatchi';
 import Education from './Components/EducationFolder/Education';
 import TeamsAndBooks from './Components/EducationFolder/TeamAndStd';
 import BookData from './Components/EducationFolder/BookData';
+import CBSECategories from './Components/EducationFolder/CBSECategories';
 
 
 function App() {
