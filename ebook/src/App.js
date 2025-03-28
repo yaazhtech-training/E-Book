@@ -21,7 +21,7 @@ import NaamTamilarKatchi from './Components/NaamTamilar/NaamTamilarKatchi';
 import Education from './Components/EducationFolder/Education';
 import TeamsAndBooks from './Components/EducationFolder/TeamAndStd';
 import BookData from './Components/EducationFolder/BookData';
-import CBSECategories from './Components/EducationFolder/CBSECategories';
+import ShowGenderal from './Components/ShowGenderal';
 
 
 function App() {
@@ -51,7 +51,9 @@ function App() {
        
         <Route path='/history'element={<History/>}/>
         <Route path='/ntk'element={<NaamTamilarKatchi/>}/>
-        <Route path='/show'element={<ShowPdf/>}/>
+        <Route path='/showgen'element={<ShowGenderal/>}/>
+
+
 
 
         {/* Education  */}
@@ -59,6 +61,8 @@ function App() {
         <Route path='/edu'element={<Education/>}/>
         <Route path="/:board/:standard" element={<TeamsAndBooks />} />
         <Route path='/show'element={<BookData/>}/>
+        <Route path='/show'element={<ShowPdf/>}/>
+
 
 
        

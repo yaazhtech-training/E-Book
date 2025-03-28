@@ -78,7 +78,7 @@ const Literature = () => {
           <div key={index} className="text-center p-3 bg-gray-50 rounded-md shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-200">
             <img src={book.image} alt={book.alt} className="w-full h-72 object-cover rounded-xl" />
             <h1 className="text-black font-bold mt-3 text-sm sm:text-base">{book.name}</h1>
-        <Link to='/show'
+        <Link to='/showgen'
         state={{book:book,}}>    <button
              
         className="mt-3 px-4 py-2 bg-[#66FCF1] text-[#1F2833] rounded-sm font-bold hover:bg-[#45E0D3]"

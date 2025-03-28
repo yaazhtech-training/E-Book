@@ -54,7 +54,7 @@ const History = () => {
                 className="w-full h-72 object-cover rounded-xl"
               />
               <h1 className="text-black font-bold mt-3 text-sm sm:text-base">{book.name}</h1>
-          <Link to='/show'
+          <Link to='/showgen'
           state={{
             book:book,
           }}>
